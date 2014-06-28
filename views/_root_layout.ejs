@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title><%= titl %></title>
+    <link rel="stylesheet" href="stylesheet/Fiddle-all.css"/>
+    <script type="text/javascript" src=""></script>
+
+    <style>
+        #splashScreen {
+            position         : absolute;
+            top              : 0;
+            bottom           : 0;
+            right            : 0;
+            left             : 0;
+            background       : #2d2d2d;
+            background-image : url('resources/images/stats_bg_tiled.jpg');
+            z-index          : 30000;
+            text-align       : center;
+            font-family      : helvetica, arial, verdana, sans-serif;
+        }
+
+        #splashScreen .title {
+            font-size              : 3em;
+            line-height            : 30px;
+            color                  : #fff;
+            -webkit-font-smoothing : antialiased;
+        }
+
+        #splashScreenLoading {
+            margin-top             : 5px;
+            color                  : #fff;
+            -webkit-font-smoothing : antialiased;
+        }
+
+        #splashScreenProgress {
+            background : #999;
+            border     : 1px solid #000;
+            height     : 10px;
+            width      : 400px;
+            margin     : 0 auto;
+            margin-top : 5px;
+        }
+
+        #splashScreenProgressInner {
+            height     : 10px;
+            background : #0f0;
+            width      : 200px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="splashScreen">
+    <img src="resources/images/sencha-logo.png" />
+
+    <div class="title">Sencha Fiddle</div>
+    <div id="splashScreenLoading">Loading Application Files...</div>
+    <div id="splashScreenProgress">
+        <div id="splashScreenProgressInner"></div>
+    </div>
+</div>
+
+<textarea id="useCode" style="display:none;">{useCode}</textarea>
+
+</body>
+</html>
