@@ -27,17 +27,19 @@ Ext.define('App.Application', {
         Ext.state.Manager.setProvider(Ext.create("Ext.state.CookieProvider"));
     },
     launch: function() {
-        var c = Ext.get("splashScreenLoading"), 
+        var s = Ext.get("splashScreen"),
+            c = Ext.get("splashScreenLoading"), 
             d = Ext.get("splashScreenProgress"), 
-            a = Ext.get("splashScreenProgressInner");
+            a = Ext.get("splashScreenProgressInner"),
+            navigation  = Ext.StoreMgr.get("navigation");
         c.update("Creating Interface...");
         d.setStyle("height", "13px");
         a.setStyle("width", "300px");
-        this.destroySplash();
-    },
-    destroySplash: function() {
-        var b = this, c = Ext.get("splashScreen");
-        Ext.destroy(c);
-        console.log("!");
+        navigation.load({
+            scope: this,
+            callback: function(records, operation, success) {
+                // Ext.destroy(s);
+            }
+        });
     }
 });
