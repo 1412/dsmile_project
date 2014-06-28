@@ -25,5 +25,19 @@ Ext.define('App.Application', {
         Ext.setGlyphFontFamily("Pictos");
         Ext.tip.QuickTipManager.init();
         Ext.state.Manager.setProvider(Ext.create("Ext.state.CookieProvider"));
+    },
+    launch: function() {
+        var c = Ext.get("splashScreenLoading"), 
+            d = Ext.get("splashScreenProgress"), 
+            a = Ext.get("splashScreenProgressInner");
+        c.update("Creating Interface...");
+        d.setStyle("height", "13px");
+        a.setStyle("width", "300px");
+        this.destroySplash();
+    },
+    destroySplash: function() {
+        var b = this, c = Ext.get("splashScreen");
+        Ext.destroy(c);
+        console.log("!");
     }
 });

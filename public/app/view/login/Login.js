@@ -11,7 +11,7 @@ Ext.define('App.view.login.Login', {
     viewModel: "login",
     controller: "login",
     bodyPadding: 10,
-    title: "Login - Ticket App",
+    title: "Login - D'smile Klinik",
     closable: false,
     minHeight: 180,
     minWidth: 320, 
