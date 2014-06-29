@@ -5,7 +5,6 @@ var DB = function(config){
 	this.task = require('./initial.js');
 	this.__proto__.preinit = function() {
 		/* Modify Task Config */
-		/*
 		this.task.splice(this.task.indexOf("%"), 0, {
 			ref: "application_info",
 			task: "create",
@@ -19,7 +18,6 @@ var DB = function(config){
 				address: this.config.application.address
 			}
 		});
-		*/
 		this.task.splice(this.task.indexOf("&"), 0, {
 			ref: "admin_user",
 			task: "build",
@@ -61,7 +59,7 @@ var DB = function(config){
 		options.scope = (options.scope === undefined)? this:options.scope;
 		try {
 			this.preinit();
-			console.log("Connecting to database");
+			console.log(">> Connecting to database...");
 			this.Client = new SEQUELIZE(config.db.database, config.db.username, config.db.password, {
 				host: config.db.host,
 				port: config.db.port,
@@ -137,10 +135,11 @@ var DB = function(config){
 				}				
 			}
 			this.Client.sync().success(function() {
-				console.log("Finish sync database");
+				console.log(">> Connected to database");
 				this.task_object = {};
 				this.schema["ApplicationInfo"].count().success(function(c) {
 					if (c == 0) {
+						console.log(">> Insert initial data...");
 						this.taskreference = {};
 						this.taskworker = setInterval(function(){
 							if (this.taskworker.isrun) {
@@ -150,9 +149,11 @@ var DB = function(config){
 							if (this.task.length == 0) {
 								clearInterval(this.taskworker);
 								if (this.taskworker.success) {
+									console.log(">> Finish insert initial data with errors:\n", this.taskworker.error);
 									options.onsuccess.apply(options.scope, [e, this]);
 									return;
 								} else {
+									console.log(">> Failed to insert initial data with errors:\n", this.taskworker.error);
 									options.onerror.apply(options.scope, [e, this]);
 									return;
 								}								
@@ -169,11 +170,9 @@ var DB = function(config){
 												this.taskworker.success = true;
 												this.taskreference[this.taskworker.task.ref] = record;
 												this.task.shift();
-												console.log("Create: " + this.taskworker.task.ref);
 												return;
 											}.bind(this)).error(function(e){
 												this.taskworker.isrun = false;
-												console.log(e);
 												this.taskworker.error.push(e);
 												if (!this.taskworker.task.continueOnError) {
 													this.taskworker.success = false;
@@ -185,7 +184,6 @@ var DB = function(config){
 											this.task.shift();
 											this.taskworker.isrun = false;
 											var e = "Non table or insufficient config " + JSON.stringify(task, undefined, 4);
-											console.log(e);
 											this.taskworker.error.push(e);
 											return;	
 										}
@@ -199,13 +197,11 @@ var DB = function(config){
 											this.taskworker.success = true;
 											this.taskreference[this.taskworker.task.ref] = record;
 											this.task.shift();
-											console.log("Build: " + this.taskworker.task.ref);
 											return;
 										} else {
 											this.task.shift();
 											this.taskworker.isrun = false;
 											var e = "Non exist table, or insufficient config " + JSON.stringify(task, undefined, 4);
-											console.log(e);
 											this.taskworker.error.push(e);
 											return;	
 										}
@@ -219,11 +215,9 @@ var DB = function(config){
 												this.taskworker.success = true;
 												this.taskreference[this.taskworker.task.ref] = record;
 												this.task.shift();
-												console.log("Saving: " + this.taskworker.task.ref);
 												return;
 											}.bind(this)).error(function(e){
 												this.taskworker.isrun = false;
-												console.log(e);
 												this.taskworker.error.push(e);
 												if (!this.taskworker.task.continueOnError) {
 													this.taskworker.success = false;
@@ -235,7 +229,6 @@ var DB = function(config){
 											this.task.shift();
 											this.taskworker.isrun = false;
 											var e = "Non exist record, or insufficient config " + JSON.stringify(task, undefined, 4);
-											console.log(e);
 											this.taskworker.error.push(e);
 											return;	
 										}
@@ -258,11 +251,9 @@ var DB = function(config){
 												this.taskworker.success = true;
 												this.taskreference[this.taskworker.task.ref] = record;
 												this.task.shift();
-												console.log("Relate: " + this.taskworker.task.ref);
 												return;
 											}.bind(this)).error(function(e){
 												this.taskworker.isrun = false;
-												console.log(e);
 												this.taskworker.error.push(e);
 												if (!this.taskworker.task.continueOnError) {
 													this.taskworker.success = false;
@@ -274,7 +265,6 @@ var DB = function(config){
 											this.task.shift();
 											this.taskworker.isrun = false;
 											var e = "Non exist record, or insufficient config " + JSON.stringify(task, undefined, 4);
-											console.log(e);
 											this.taskworker.error.push(e);
 											return;	
 										}
@@ -287,7 +277,6 @@ var DB = function(config){
 										this.task.shift();
 										this.taskworker.isrun = false;
 										var e = "Try to process non object config " + JSON.stringify(task, undefined, 4);
-										console.log(e);
 										this.taskworker.error.push(e);
 										return;	
 									break;
