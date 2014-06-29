@@ -94,7 +94,7 @@ var DB = function(config){
 				},
 			 
 				// similiar for sync: you can define this to always force sync for models
-				sync: { force: true },
+				sync: { force: false },
 			 
 				// sync after each association (see below). If set to false, you need to sync manually after setting all associations. Default: true
 				syncOnAssociation: true,
