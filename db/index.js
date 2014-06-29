@@ -150,7 +150,7 @@ var DB = function(config){
 								clearInterval(this.taskworker);
 								if (this.taskworker.success) {
 									console.log(">> Finish insert initial data with errors:\n", this.taskworker.error);
-									options.onsuccess.apply(options.scope, [e, this]);
+									options.onsuccess.apply(options.scope, [this]);
 									return;
 								} else {
 									console.log(">> Failed to insert initial data with errors:\n", this.taskworker.error);
@@ -284,7 +284,7 @@ var DB = function(config){
 							}
 						}.bind(this), 10);
 					} else {
-						options.onsuccess.apply(options.scope, [e, this])
+						options.onsuccess.apply(options.scope, [this])
 						return;
 					}
 				}.bind(this)).error(function(e){

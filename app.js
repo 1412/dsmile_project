@@ -16,11 +16,12 @@ var csrf = require('csurf');
 var session = require('cookie-session');
 var compression = require('compression');
 var timeout = require('connect-timeout');
+var confreader = require("config-reader");
 
 var publicdir = path.join(__dirname, 'public');
 var routedir = path.join(__dirname, 'routes');
 var viewdir = path.join(__dirname, 'views');
-var confreader = require("config-reader");
+
 var CONFIG = {}
 try {
 	CONFIG = (new confreader()).parseSync("config.json");	
@@ -33,6 +34,12 @@ var DB = require('./db/');
 var app = express();
 app.config = CONFIG;
 app.db = new DB(CONFIG);
+app.isWin = /^win/.test(process.platform);
+if (app.isWin) {
+	publicdir = path.join(__dirname, 'public').replace(/\\/gi, "/");
+	routedir = path.join(__dirname, 'routes').replace(/\\/gi, "/");
+	viewdir = path.join(__dirname, 'views').replace(/\\/gi, "/");
+}
 
 // view engine setup
 app.set('title', CONFIG.site.title);
@@ -77,16 +84,19 @@ app.use(function (req, res, next){
   if (!req.timedout) next();
 });
 
-app.setRoutes = function(scriptpath){
+app.setRoutes = function(scriptpath){	
 	if (scriptpath === undefined) {
 		scriptpath = routedir;
 	}
+	if (this.isWin) {
+		scriptpath = scriptpath.replace(/\\/gi, "/");
+	} 
     var stat = fs.lstatSync(scriptpath)
     if (stat.isDirectory()) {
         //TODO: should handle new/rename/remove route dir
         var files = fs.readdirSync(scriptpath);
         for (var i = 0; i < files.length; i++) {
-            app.setRoutes(scriptpath + path.sep + files[i])
+            this.setRoutes(scriptpath + path.sep + files[i])
         }
     } else if (stat.isFile()) {
         //TODO: should handle new/rename/remove route
@@ -109,20 +119,20 @@ app.setRoutes = function(scriptpath){
 			}    
             if (routescript.__proto__ == express.Router().__proto__) {
                 isrouter = true;
-                for (var i = 0; i < app._router.stack.length; i++) {
-                    if (app._router.stack[i] === undefined) {
+                for (var i = 0; i < this._router.stack.length; i++) {
+                    if (this._router.stack[i] === undefined) {
                         continue;
                     }
-                    if (app._router.stack[i].regexp.toString() == "/^\\"+route+"\\/?(?=/|$)/i") { 
+                    if (this._router.stack[i].regexp.toString() == "/^\\"+route+"\\/?(?=/|$)/i") { 
                         found = true;
                         if (isrouter) {
-                            app._router.stack[i].handle = require(scriptpath);                            
+                            this._router.stack[i].handle = require(scriptpath);                            
                         }
                         break;
                     }
                 }
                 if (!found && isrouter) {
-                    app.use(route, routescript);
+                    this.use(route, routescript);
                 }
             }
             fs.unwatchFile(scriptpath);
@@ -133,48 +143,52 @@ app.setRoutes = function(scriptpath){
     }
 }
 
-/// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
+app.setErrorHandler = function(){
+	/// catch 404 and forward to error handler
+	this.use(function(req, res, next) {
+		var err = new Error('Not Found');
+		err.status = 404;
+		next(err);
+	});
 
-/// error handlers
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-    app.use(function(err, req, res, next) {
-        res.status(err.status || 500);
-        res.render('error', {
-            message: err.message,
-            error: err
-        });
-    });
+	/// error handlers
+	// development error handler
+	// will print stacktrace
+	if (this.get('env') === 'development') {
+		this.use(function(err, req, res, next) {
+			res.status(err.status || 500);
+			res.render('error', {
+				message: err.message,
+				error: err
+			});
+		});
+	}
+
+	// production error handler
+	// no stacktraces leaked to user
+	this.use(function(err, req, res, next) {
+		res.status(err.status || 500);
+		res.render('error', {
+			message: err.message,
+			error: {}
+		});
+	});
+
 }
 
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-        message: err.message,
-        error: {}
-    });
-});
-
 app.start = function() {
-	app.db.init({
+	this.db.init({
 		onsuccess: function(){
-			app.setRoutes();
-			app.listen(app.config.site.listen_port);
-			console.log(">> Listening to port: " + app.config.site.listen_port);
+			this.setRoutes();
+			this.setErrorHandler();
+			this.listen(app.config.site.listen_port);
+			console.log(">> Listening to port: " + this.config.site.listen_port);
 		},
 		onerror: function(e){
 			console.log(">> Error initializing database", e);
 		},
-		scope: app,
-		config: app.config
+		scope: this,
+		config: this.config
 	})
 }
 
