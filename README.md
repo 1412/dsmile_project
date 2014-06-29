@@ -17,10 +17,17 @@ cd dsmile
 npm install -d
 ```
 
+###Updating
+```
+cd dsmile
+git pull
+npm install -d
+```
+
 ###Setup
+ * edit config.json, to match your configuration
  * login to mysql as root
- * import sql.sql file
- * edit config.js, to match your configuration
+ * create user, and database match to your configuration
 
 ###Running
 run program with terminal
@@ -39,4 +46,4 @@ cd dsmile
 forever index.js
 ```
 
-###Updating
+
