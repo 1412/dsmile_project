@@ -26,30 +26,7 @@ action('signin', function (c) {
         var username = req.body.username;
         var password = req.body.password;
     }	
-	result = {
-		success: true,
-		reason: "",
-		data: {}
-	};
-	DB.User.find({ where: { username: username }, include: [{
-		model: DB.UserRole, include: [DB.Privilege]
-	}, DB.Doctor] }).success(function(user) {		
-		if (user == null) {
-			sendFailed("No such username!");
-  			return;
-		}
-		if (user.password != md5(password)) {
-			sendFailed("Wrong password");
-			return;
-		}
-		req.session = {
-			user: user.flatData
-		}
-		result.data = user.flatData;
-  		send(result);		
-	}).error(function(e){
-		sendFailed(e)
-	});  	
+	
 });
 
 action('getnavigation', function (c) {

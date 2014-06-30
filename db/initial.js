@@ -208,7 +208,7 @@ var sequelizetask = ["%", {
 var posistions = ["UL", "UR", "DR", "DL"];
 for (var pos in posistions) {
 	for (var i = 1; i <= 8; i++) {
-		sequelizetask.splice(sequelizetask.indexOf("#"), 0, {
+		sequelizetask.splice(sequelizetask.indexOf("#"), 1, {
 			ref: "teeth" + posistions[pos] + i,
 			task: "create",
 			table: "TeethTreatment",

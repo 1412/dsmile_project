@@ -1,11 +1,11 @@
 var SEQUELIZE = require('sequelize');
 var plural = require('plural')
 var DB = function(config){
-	this.schema = require('./schema.js');
-	this.task = require('./initial.js');
+	this.__proto__.schema = require('./schema.js');
+	this.__proto__.task = require('./initial.js');
 	this.__proto__.preinit = function() {
 		/* Modify Task Config */
-		this.task.splice(this.task.indexOf("%"), 0, {
+		this.task.splice(this.task.indexOf("%"), 1, {
 			ref: "application_info",
 			task: "create",
 			table: "ApplicationInfo",
@@ -18,12 +18,12 @@ var DB = function(config){
 				address: this.config.application.address
 			}
 		});
-		this.task.splice(this.task.indexOf("&"), 0, {
+		this.task.splice(this.task.indexOf("&"), 1, {
 			ref: "admin_user",
 			task: "build",
 			table: "User",
 			data: {
-				username: this.config.application.admin_name,
+				username: this.config.application.admin_username,
 				password: require('crypto').createHash('md5').update(this.config.application.admin_password).digest('hex'),
 				enabled: true,
 				email: this.config.application.admin_email
@@ -34,25 +34,6 @@ var DB = function(config){
 	
 	this.__version = this.schema.__version;
 	this.__proto__.config = config;
-	DB.__proto__.define = function(){
-	};
-	DB.__proto__.relate = function(){
-	};
-	DB.__proto__.build = function(){
-	};
-	DB.__proto__.save = function(){
-	};
-	DB.__proto__.remove = function(){
-	};
-	this.__proto__.MergeJSON = function(target){
-		var sources = [].slice.call(arguments, 1);
-		sources.forEach(function (source) {
-			for (var prop in source) {
-				target[prop] = source[prop];
-			}
-		});
-		return target;
-	};
 	this.__proto__.init = function(options){
 		options.onerror = (options.onerror === undefined)? function(){}:options.onerror;
 		options.onsuccess = (options.onsuccess === undefined)? function(){}:options.onsuccess;
@@ -111,7 +92,7 @@ var DB = function(config){
 				var table = this.schema[key];
 				var option = this.schema[key].__proto__;
 				delete table.__proto__;
-				this.schema[key] = this.Client.define(key, table, option);		 
+				this[key] = this.schema[key] = this.Client.define(key, table, option);		 
 			}
 			for (i in relation_config) {
 				var relation = relation_config[i];
@@ -149,7 +130,9 @@ var DB = function(config){
 							if (this.task.length == 0) {
 								clearInterval(this.taskworker);
 								if (this.taskworker.success) {
-									console.log(">> Finish insert initial data with errors:\n", this.taskworker.error);
+									console.log(">> Finish insert initial", 
+										(this.taskworker.error.length > 0)? "data with errors:\n":"", 
+										(this.taskworker.error.length > 0)? this.taskworker.error:"");
 									options.onsuccess.apply(options.scope, [this]);
 									return;
 								} else {

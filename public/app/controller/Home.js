@@ -42,20 +42,19 @@ Ext.define('App.controller.Home', {
         }
     },
     
-    onLaunch: function () {
+    onLaunch: function () {},
+
+    start: function(){
         if (Ext.isIE8) {
             Ext.Msg.alert('Not Supported', 'This application is not supported on Internet Explorer 8. Please use a different browser.');
             return;
         } 
         this.viewport = null;
         this.viewport = new App.view.main.Main();
-        Ext.getBody().mask("Loading");
         this._navigationstore = Ext.StoreMgr.get("navigation");
         if (!this.isLogin()) {
             this.redirectTo('login');
             return;
-        } else {
-            this.loadNavigation();
         }
     },
 
@@ -179,6 +178,7 @@ Ext.define('App.controller.Home', {
     },
 
     loadNavigation: function(){
+        Ext.getBody().mask();
         this._navigationstore.load({
             scope: this,
             callback: function(records, operation, success) {
@@ -196,7 +196,7 @@ Ext.define('App.controller.Home', {
                     breadcrumb._breadcrumbBar.setSelection(allnode);                    
                 }
             }
-        })
+        });
     },
     
     updateTitle: function(e) {

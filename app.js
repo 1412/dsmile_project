@@ -52,8 +52,7 @@ app.set('layout', 'layout');
 app.use(ejslayout);
 app.use(timeout());
 app.use(session({
-    keys: [CONFIG.site.session_secret],
-    secureProxy: true
+    keys: [CONFIG.site.session_secret]
 }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
@@ -81,9 +80,14 @@ app.use(compression({
     threshold: 512
 }));
 app.use(function (req, res, next){
-  if (!req.timedout) next();
+	if (!req.timedout) next();
 });
+/* Register to Globals */
+global.app = app;
+global.db = app.db;
 
+
+app._router.stack_map = {};
 app.setRoutes = function(scriptpath){	
 	if (scriptpath === undefined) {
 		scriptpath = routedir;
@@ -104,9 +108,8 @@ app.setRoutes = function(scriptpath){
             var route = scriptpath.replace(routedir, "").replace(/\.js$/, "");
             if (route == "/_root") {
                 route = "/";
-            }
+            }            
             delete require.cache[require.resolve(scriptpath)];
-            var found = false;
             var isrouter = false;
 			var routescript = {};
 			try {
@@ -116,23 +119,18 @@ app.setRoutes = function(scriptpath){
 				"\n---------------------------------------\n",
 				e.stack, 
 				"\n---------------------------------------\n")
-			}    
+			}
             if (routescript.__proto__ == express.Router().__proto__) {
                 isrouter = true;
-                for (var i = 0; i < this._router.stack.length; i++) {
-                    if (this._router.stack[i] === undefined) {
-                        continue;
-                    }
-                    if (this._router.stack[i].regexp.toString() == "/^\\"+route+"\\/?(?=/|$)/i") { 
-                        found = true;
-                        if (isrouter) {
-                            this._router.stack[i].handle = require(scriptpath);                            
-                        }
-                        break;
-                    }
-                }
-                if (!found && isrouter) {
-                    this.use(route, routescript);
+                var stack_index = this._router.stack_map[route]
+                var stack = this._router.stack[stack_index];
+                if (stack) {
+                	this._router.stack[stack_index].handle = routescript;
+                	console.log(">> Replace Route Stack \"" + route + "\"");
+                } else {
+                	this.use(route, routescript);
+                    this._router.stack_map[route] = (this._router.stack.length-1);
+                    console.log(">> Add Route Stack \"" + route + "\"");
                 }
             }
             fs.unwatchFile(scriptpath);
