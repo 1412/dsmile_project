@@ -95,6 +95,11 @@ Ext.define('App.controller.Home', {
             nextick.stop();
             return;
         }
+        if (this._navigationstore === undefined) {
+            this.redirectTo('');
+            nextick.stop();
+            return;
+        }
         var node = this._navigationstore.getNodeById(route);
         if (!this.isLogin()) {
             this.redirectTo('login');
