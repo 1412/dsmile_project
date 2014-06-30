@@ -51,7 +51,7 @@ router.post('/', function(req, res) {
 		if (d.success) {
 			req.session.user = d.data; 
 		} 
-		req.end(JSON.stringify(d));	
+		res.end(JSON.stringify(d));	
 	});
 });
 

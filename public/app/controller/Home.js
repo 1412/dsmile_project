@@ -42,9 +42,11 @@ Ext.define('App.controller.Home', {
         }
     },
     
-    onLaunch: function () {},
+    onLaunch: function () {
 
-    start: function(){
+    },
+
+    start: function(records, operation, success) {
         if (Ext.isIE8) {
             Ext.Msg.alert('Not Supported', 'This application is not supported on Internet Explorer 8. Please use a different browser.');
             return;
@@ -52,6 +54,18 @@ Ext.define('App.controller.Home', {
         this.viewport = null;
         this.viewport = new App.view.main.Main();
         this._navigationstore = Ext.StoreMgr.get("navigation");
+        var tree = this.getNavigationTree();
+        var breadcrumb = this.getNavigationBreadcrumb();
+        var allnode = this._navigationstore.getRoot();
+        var mainmenu = this.getMainMenuStore();
+        mainmenu.removeAll();
+        mainmenu.add(records);
+        if (tree && tree.isVisible()) {                                     
+            itree.getSelectionModel().select(allnode);   
+            tree.getView().focusNode(allnode);
+        } else {
+            breadcrumb._breadcrumbBar.setSelection(allnode);                    
+        }
         if (!this.isLogin()) {
             this.redirectTo('login');
             return;
@@ -161,10 +175,17 @@ Ext.define('App.controller.Home', {
     },
     
     onLogin: function (loginController, user, loginManager) {
+        var s = Ext.get("splashScreen"),
+            c = Ext.get("splashScreenLoading"), 
+            d = Ext.get("splashScreenProgress"), 
+            a = Ext.get("splashScreenProgressInner");
+        c.update("Restarting...");
+        a.setStyle("width", "0px");
+        s.show();
         this.login.destroy();
         this.loginManager = loginManager;
         this.user = user;   
-        this.loadNavigation();
+        window.location.href = "/"
     },
     
     isLogin: function(){
@@ -175,28 +196,6 @@ Ext.define('App.controller.Home', {
     	} catch(e){
     		return false
     	}
-    },
-
-    loadNavigation: function(){
-        Ext.getBody().mask();
-        this._navigationstore.load({
-            scope: this,
-            callback: function(records, operation, success) {
-                Ext.getBody().unmask();
-                var tree = this.getNavigationTree();
-                var breadcrumb = this.getNavigationBreadcrumb();
-                var allnode = this._navigationstore.getRoot();
-                var mainmenu = this.getMainMenuStore();
-                mainmenu.removeAll();
-                mainmenu.add(records);
-                if (tree && tree.isVisible()) {                                     
-                    itree.getSelectionModel().select(allnode);   
-                    tree.getView().focusNode(allnode);
-                } else {
-                    breadcrumb._breadcrumbBar.setSelection(allnode);                    
-                }
-            }
-        });
     },
     
     updateTitle: function(e) {

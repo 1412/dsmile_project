@@ -75,7 +75,7 @@ app.use(methodOverride(function(req, res){
         return method
     }
 }));
-app.use(csrf());
+// app.use(csrf());
 app.use(compression({
     threshold: 512
 }));

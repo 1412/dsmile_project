@@ -43,7 +43,7 @@ Ext.define('App.Application', {
                 a.setStyle("width", "400px");
                 var c = this.getController('Home', true);
                 c.start(records, operation, success);
-                Ext.destroy(s);
+                s.hide();
             }
         });
     }
