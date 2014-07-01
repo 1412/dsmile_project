@@ -133,26 +133,30 @@ Ext.define('App.controller.Home', {
             J.body.addCls("kitchensink-example");
             A = Ext.ClassManager.getNameByAlias("widget." + I);
             x = Ext.ClassManager.get(A);
-            E = x.prototype;
-            if (E.themes) {
-                E.themeInfo = E.themes[C];
-                if (C === "gray") {
-                    E.themeInfo = Ext.applyIf(E.themeInfo || {}, E.themes.classic);
-                } else {
-                    if (C !== "neptune" && C !== "classic") {
-                        if (C === "crisp-touch") {
-                            E.themeInfo = Ext.applyIf(E.themeInfo || {}, E.themes["neptune-touch"]);
+            if (x) {
+                E = x.prototype;
+                if (E.themes) {
+                    E.themeInfo = E.themes[C];
+                    if (C === "gray") {
+                        E.themeInfo = Ext.applyIf(E.themeInfo || {}, E.themes.classic);
+                    } else {
+                        if (C !== "neptune" && C !== "classic") {
+                            if (C === "crisp-touch") {
+                                E.themeInfo = Ext.applyIf(E.themeInfo || {}, E.themes["neptune-touch"]);
+                            }
+                            E.themeInfo = Ext.applyIf(E.themeInfo || {}, E.themes.neptune);
                         }
-                        E.themeInfo = Ext.applyIf(E.themeInfo || {}, E.themes.neptune);
                     }
                 }
+                y = new x();
+                J.add(y);
             }
-            y = new x();
-            J.add(y);
             this.updateTitle(G);
             Ext.resumeLayouts(true);
-            if (y.floating) {
-                y.show();
+            if (y) {
+                if (y.floating) {
+                    y.show();
+                }
             }
         } else {
             u = z.getMainMenuStore();
