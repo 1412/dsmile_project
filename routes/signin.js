@@ -37,22 +37,30 @@ function md5(input){
 	return require('crypto').createHash('md5').update(input.toString()).digest('hex');
 }
 
-router.get('/', function(req, res) {
- 	signin(req.query.username, req.query.password, function(d){
-		if (d.success) {
-			req.session.user = d.data; 
-		} 
-		res.end(JSON.stringify(d));
-	});
+router.get('/', function(req, res, next) {
+	try {
+	 	signin(req.query.username, req.query.password, function(d){
+			if (d.success) {
+				req.session.user = d.data; 
+			} 
+			res.end(JSON.stringify(d));
+		});
+	} catch(e) {
+		next(e);
+	}
 });
 
-router.post('/', function(req, res) {
-	signin(req.body.username, req.body.password, function(d){
-		if (d.success) {
-			req.session.user = d.data; 
-		} 
-		res.end(JSON.stringify(d));	
-	});
+router.post('/', function(req, res, next) {
+	try {
+	 	signin(req.body.username, req.body.password, function(d){
+			if (d.success) {
+				req.session.user = d.data; 
+			} 
+			res.end(JSON.stringify(d));	
+		});
+	} catch(e) {
+		next(e);
+	}	
 });
 
 module.exports = router;

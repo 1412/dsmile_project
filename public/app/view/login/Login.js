@@ -1,11 +1,7 @@
 Ext.define('App.view.login.Login', {
     requires: [
         'App.view.login.LoginController',
-        'App.view.login.LoginModel',
-        'Ext.form.Panel',
-        'Ext.button.Button',
-        'Ext.form.field.Text',
-        'Ext.form.field.ComboBox'
+        'App.view.login.LoginModel'
     ],    
     extend: "Ext.window.Window",
     viewModel: "login",
@@ -18,7 +14,7 @@ Ext.define('App.view.login.Login', {
     cls: "login",
     items: {
         xtype: "form",
-        reference: "form",
+        reference: "loginform",
         bodyCls: 'noborder-form',
         fieldDefaults: {
             labelAlign: 'left',

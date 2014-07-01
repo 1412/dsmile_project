@@ -75,6 +75,8 @@ app.use(methodOverride(function(req, res){
         return method
     }
 }));
+
+
 // app.use(csrf());
 app.use(compression({
     threshold: 512
@@ -85,7 +87,30 @@ app.use(function (req, res, next){
 /* Register to Globals */
 global.app = app;
 global.db = app.db;
+global.Router = express.Router;
 
+/* Project Wait, this portion should be developed 
+   to replace current auto route */ /*
+app.locals.somevar = "hello world";
+routescript = require('./routes/_root.js');
+//app._router.stack.push(routescript);
+var URL = require('url');
+var vm = require('vm');
+var filename = routedir + "/route.js";
+fs.readFile(filename, function (err, script) {
+  	if (err) {
+  		next(err)
+  	}
+  	var f = new Function('context', 'require', 'with (context) { (function () { ' + script + '\n })() }');
+  	f(app, require);
+  	usingscript = vm.runInThisContext(data);
+  	console.log(usingscript);
+});
+
+app.use(function(req, res, next){
+	var url = URL.parse(req.url);	
+});
+*/
 
 app._router.stack_map = {};
 app.setRoutes = function(scriptpath){	

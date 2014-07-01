@@ -18,7 +18,7 @@ Ext.define('App.view.login.LoginController', {
         this.doLogin();
     },
     doLogin: function() {
-        var b = this.lookupReference("form");
+        var b = this.lookupReference("loginform");
         if (b.isValid()) {
             Ext.getBody().mask(this.loginText);
             this.loginManager.login({
@@ -29,11 +29,14 @@ Ext.define('App.view.login.LoginController', {
             });
         }
     },
-    onLoginFailure: function() {
+    onLoginFailure: function(response, resultSet) {
         Ext.getBody().unmask();
+        var text = "HTTP Code: " + response.status + ", " + response.statusText +
+                ((resultSet === undefined)? "":("<br/><br/>Response: " + resultSet.getRecords()[0].get("data")));
+        Ext.Msg.alert('Login Failed', text);
     },
-    onLoginSuccess: function(d) {
+    onLoginSuccess: function(user, records) {
         Ext.getBody().unmask();
-        this.fireViewEvent("login", this.getView(), d, this.loginManager);
+        this.fireViewEvent("login", this.getView(), this.loginManager, user, records);
     }
 });

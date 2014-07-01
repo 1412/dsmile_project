@@ -5,7 +5,9 @@ Ext.define('App.controller.Home', {
         'App.store.Navigation',
         'App.view.main.Main',
         'App.view.main.MainMenu',
-        'App.LoginManager'
+        'App.LoginManager',
+
+        'App.view.logout.Logout'
     ],
     stores: [ "MainMenu" ],
     config: {
@@ -53,19 +55,7 @@ Ext.define('App.controller.Home', {
         } 
         this.viewport = null;
         this.viewport = new App.view.main.Main();
-        this._navigationstore = Ext.StoreMgr.get("navigation");
-        var tree = this.getNavigationTree();
-        var breadcrumb = this.getNavigationBreadcrumb();
-        var allnode = this._navigationstore.getRoot();
-        var mainmenu = this.getMainMenuStore();
-        mainmenu.removeAll();
-        mainmenu.add(records);
-        if (tree && tree.isVisible()) {                                     
-            itree.getSelectionModel().select(allnode);   
-            tree.getView().focusNode(allnode);
-        } else {
-            breadcrumb._breadcrumbBar.setSelection(allnode);                    
-        }
+        this.loadNavigationRecord();
         if (!this.isLogin()) {
             this.redirectTo('login');
             return;
@@ -159,7 +149,6 @@ Ext.define('App.controller.Home', {
             }
             y = new x();
             J.add(y);
-            this.setupPreview(E);
             this.updateTitle(G);
             Ext.resumeLayouts(true);
             if (y.floating) {
@@ -179,18 +168,17 @@ Ext.define('App.controller.Home', {
         }
     },
     
-    onLogin: function (loginController, user, loginManager) {
-        var s = Ext.get("splashScreen"),
-            c = Ext.get("splashScreenLoading"), 
-            d = Ext.get("splashScreenProgress"), 
-            a = Ext.get("splashScreenProgressInner");
-        c.update("Restarting...");
-        a.setStyle("width", "0px");
-        s.show();
+    onLogin: function (loginController, loginManager, user, records) {
+        this.loadNavigationRecord();
         this.login.destroy();
         this.loginManager = loginManager;
-        this.user = user;   
-        window.location.href = "/"
+        this.user = user;
+    },
+
+    onLogout: function (loginController, loginManager, user, records) {
+        this.loadNavigationRecord();
+        this.loginManager = loginManager;
+        this.user = user;
     },
     
     isLogin: function(){
@@ -213,6 +201,23 @@ Ext.define('App.controller.Home', {
             this.getContentPanel().setTitle(d);
             document.title = document.title.split(" - ")[0] + " - " + g;
         }        
+    },
+
+    loadNavigationRecord: function(records){
+        this._navigationstore = Ext.StoreMgr.get("navigation");
+        var tree = this.getNavigationTree();
+        var breadcrumb = this.getNavigationBreadcrumb();
+        var allnode = this._navigationstore.getRoot();
+        var mainmenu = this.getMainMenuStore();
+        mainmenu.removeAll();
+        mainmenu.add(records);
+        if (tree && tree.isVisible()) {                                     
+            itree.getSelectionModel().select(allnode);   
+            tree.getView().focusNode(allnode);
+        } else {
+            breadcrumb._breadcrumbBar.setSelection(allnode);                    
+        };
+        this.redirectTo(allnode.get("id"))
     },
     
     onTreeNavSelectionChange: function(g, d) {
