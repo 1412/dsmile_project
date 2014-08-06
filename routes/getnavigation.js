@@ -62,8 +62,8 @@ router.get('/', function(req, res) {
 				            }]	
 				        }, {
 				            id: "admin-report",
-				            text: "Manajement Pelanggan",
-				            description: "Daftar pelanggan periodik, dan embuatan laporan",
+				            text: "Laporan",
+				            description: "Daftar pelanggan periodik, dan pembuatan laporan",
 				            expanded: true,
 				            children: [{
 				            	id: "admin-report-customers",

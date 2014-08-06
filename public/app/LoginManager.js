@@ -25,7 +25,7 @@ Ext.define('App.LoginManager', {
     
     onLoginReturn: function(options, success, response) {
         options = options.original;
-        var resultSet;        
+        var resultSet;   
         if (success) {        	
             resultSet = this.getModel().getProxy().getReader().read(response);
             if (resultSet.getSuccess()) {
@@ -37,6 +37,7 @@ Ext.define('App.LoginManager', {
                 navigation.load({
                     scope: options.scope,
                     callback: function(records, operation, success) {
+
                         if (success) {
                             Ext.callback(options.success, options.scope, [user, records]);
                             return;
@@ -45,6 +46,8 @@ Ext.define('App.LoginManager', {
                         }                        
                     }
                 });
+            } else {
+                Ext.callback(options.failure, options.scope, [response, resultSet]);
             }
         } else {
             Ext.callback(options.failure, options.scope, [response, resultSet]);
@@ -69,6 +72,7 @@ Ext.define('App.LoginManager', {
             if (resultSet.getSuccess()) {
                 Ext.util.Cookies.clear("login");
                 var navigation = Ext.StoreMgr.get("navigation");
+                var user = {};
                 navigation.load({
                     scope: options.scope,
                     callback: function(records, operation, success) {
