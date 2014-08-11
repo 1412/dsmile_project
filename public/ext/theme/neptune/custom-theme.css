@@ -139,3 +139,11 @@
 .x-rtl.thumbnails .thumbnail-text {
     direction: rtl;
 }
+
+.x-panel-body-default.welcomepanel {
+    background-image: url(images/square.gif);
+    border: none;
+    text-align: center;
+    font-size: 3em;
+    padding-top: 10px;
+}

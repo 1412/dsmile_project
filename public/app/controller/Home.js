@@ -5,9 +5,12 @@ Ext.define('App.controller.Home', {
         'App.store.Navigation',
         'App.view.main.Main',
         'App.view.main.MainMenu',
+        'App.view.main.WelcomePanel',
         'App.LoginManager',
 
-        'App.view.logout.Logout'
+        'App.view.logout.Logout',
+
+        'App.view.doctor.DoctorQueue'
     ],
     stores: [ "MainMenu" ],
     config: {
@@ -30,6 +33,11 @@ Ext.define('App.controller.Home', {
             mainmenu: {
                 selector: "mainmenu",
                 xtype: "mainmenu",
+                autoCreate: true
+            },
+            welcomepanel: {
+                selector: "welcomepanel",
+                xtype: "welcomepanel",
                 autoCreate: true
             }
         },
@@ -115,8 +123,9 @@ Ext.define('App.controller.Home', {
        	 	t = G.get("text"), 
        	 	J = z.getContentPanel(), 
        	 	C = Ext.themeName, 
+            W = z.getWelcomepanel(),
        	 	F = z.getMainmenu(),
-       	 	v, y, A, x, E, u;        
+       	 	v, y, A, x, E, u; 
         if (B && B.isVisible()) {
             B.getSelectionModel().select(G);
             B.getView().focusNode(G);
@@ -132,6 +141,8 @@ Ext.define('App.controller.Home', {
             }
             J.body.addCls("kitchensink-example");
             A = Ext.ClassManager.getNameByAlias("widget." + I);
+            //console.log(I)
+            //console.log(A)
             x = Ext.ClassManager.get(A);
             if (x) {
                 E = x.prototype;
@@ -149,6 +160,9 @@ Ext.define('App.controller.Home', {
                     }
                 }
                 y = new x();
+                if (!F.ownerCt) {
+                    J.removeAll(true);
+                }
                 J.add(y);
             }
             this.updateTitle(G);
@@ -166,6 +180,8 @@ Ext.define('App.controller.Home', {
                 J.removeAll(true);
             }
             J.body.removeCls("kitchensink-example");
+            W.setConfig({"html": "Welcome: "+ this.getLoginData().name +" (" + this.getLoginData().role + ")"});
+            J.add(W);
             J.add(F);
             this.updateTitle(G);
             Ext.resumeLayouts(true);
@@ -193,6 +209,16 @@ Ext.define('App.controller.Home', {
     	} catch(e){
     		return false
     	}
+    },
+
+    getLoginData: function(){
+        var logininfo = Ext.util.Cookies.get("login");
+        try {
+            var data = JSON.parse(Ext.util.Base64.decode(logininfo.replace("%3D", "=")));
+            return data.data;
+        } catch(e){
+            return {}
+        }
     },
     
     updateTitle: function(e) {

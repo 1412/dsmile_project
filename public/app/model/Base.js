@@ -5,7 +5,7 @@ Ext.define('App.model.Base', {
         type: "int"
     } ],
     schema: {
-        namespace: "Ticket.model",
+        namespace: "App.model",
         proxy: {
             url: "{prefix}/{entityName:uncapitalize}",
             pageParam: "",

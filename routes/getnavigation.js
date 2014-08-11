@@ -12,7 +12,7 @@ router.get('/', function(req, res) {
 			if (privileges) {
 				if (privileges.indexOf("ENTER_ADMIN_PAGE") > -1) {
 					result.children.push({            
-				        text: "Administrative",
+				        text: "Menu Admin",
 				        id: "administrative",
 				        expanded: true,
 				        description: "Administrative Panel",
@@ -83,7 +83,7 @@ router.get('/', function(req, res) {
 			    }
 		        if (privileges.indexOf("ENTER_DOCTOR_PAGE") > -1) {
 					result.children.push({
-			            text: "Dokter",
+			            text: "Menu Dokter",
 			            id: "doctor",
 			            expanded: true,
 			            description: "Panels are the basic container that makes up the structure of most applications. Panels have a header and body, and can be arranged in various ways using layouts.",
@@ -92,8 +92,16 @@ router.get('/', function(req, res) {
 			                text: "Antrian Pasien",
 			                leaf: true
 			            }, {
-			                id: "doctor-status",
-			                text: "Status",
+			                id: "doctor-patients",
+			                text: "Cari Pasien",
+			                leaf: true
+			            }, {
+			                id: "doctor-medicalrecord",
+			                text: "Rekam medis",
+			                leaf: true
+			            }, {
+			                id: "doctor-other",
+			                text: "Lain Lain",
 			                leaf: true
 			            }]
 			        });

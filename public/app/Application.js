@@ -6,7 +6,8 @@ Ext.define('App.Application', {
     	'Ext.state.CookieProvider',
         'Ext.window.MessageBox',
         'Ext.tip.QuickTipManager',
-        'App.*'
+        'App.*',
+        'App.view.doctor.*'
     ],
     namespace: "App",
     controllers: [
