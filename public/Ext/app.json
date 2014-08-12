@@ -48,12 +48,12 @@
         "namespace": "Klinik"
     },    
     "css": [{
-        "path": "ext/theme/neptune/neptune-all-debug.css"
+        "path": "Ext/theme/neptune/neptune-all-debug.css"
     }],
     "js": [{
-        "path": "ext/ext-all-debug.js"
+        "path": "Ext/ext-all-debug.js"
     }, {
-        "path": "ext/examples.js"
+        "path": "Ext/examples.js"
     }, {
         "path": "app.js"
     }],
