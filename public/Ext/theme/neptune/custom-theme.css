@@ -1,0 +1,149 @@
+#content-panel-body {
+	background-image: url(images/square.gif);
+}
+
+.noborder-form {
+	background: white;
+	border-color: white;
+}
+
+.noborder {
+    background: white;
+    border-color: white;
+}
+
+#app-header {
+	background-color: #81af34;
+	background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#8fc33a),color-stop(100%,#739b2e));
+	background-image: -webkit-linear-gradient(top,#8fc33a,#739b2e);
+	background-image: -moz-linear-gradient(top,#8fc33a,#739b2e);
+	background-image: -o-linear-gradient(top,#8fc33a,#739b2e);
+	background-image: -ms-linear-gradient(top,#8fc33a,#739b2e);
+	background-image: linear-gradient(top,#8fc33a,#739b2e);
+	border-bottom: 1px solid #567422;
+}
+
+#app-header-logo {
+    top: 0px;
+	width: 40px;
+	height: 55px;
+	background: url(images/logo.png) no-repeat center 4px;
+}
+
+#app-header-title {
+	padding: 15px 0 10px 0;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.ks-theme-switcher {
+	background-image: url(images/options.png);
+	width: 22px;
+	height: 22px;
+}
+
+#content-panel-innerCt>* {
+	margin: auto;
+}
+
+#content-panel-innerCt {
+	padding: 20px;
+	vertical-align: middle;
+}
+
+#content-panel-body {
+	background-image: url(images/square.gif);
+}
+
+.thumbnails {
+    display: table;
+}
+
+#navigation-breadcrumb {
+    border: 1px solid #157fcc;
+    background-color: #157fcc;
+}
+
+#navigation-breadcrumb .x-btn-inner-plain-toolbar-small {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: helvetica, arial, verdana, sans-serif;
+    line-height: 16px;
+}
+
+#navigation-breadcrumb .x-btn-plain-toolbar-small.x-btn-focus .x-btn-inner-plain-toolbar-small {
+    color: black;
+}
+
+#navigation-breadcrumb .x-btn-plain-toolbar-small.x-btn-over .x-btn-inner-plain-toolbar-small {
+    color: black;
+}
+
+#navigation-breadcrumb .x-btn-plain-toolbar-small.x-btn-menu-active .x-btn-inner-plain-toolbar-small {
+    color: black;
+}
+
+#navigation-breadcrumb .x-toolbar-item.x-tool-default .x-tool-img {
+    background-image: url(images/tools/tool-sprites.png);
+    background-color: #157fcc;
+}
+
+.thumbnail-item {
+    float: left;
+    width: 116px;
+    height: 156px;
+    margin-right: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.thumbnail-text {
+    text-align: center;
+}
+
+.thumbnail-icon-wrap {
+    width: 96px;
+    height: 96px;
+    text-align: center;
+    font-size: 96px;
+    line-height: 96px;
+    font-family: Sencha-Examples;
+    margin: 0 auto 8px;
+    position: relative;
+    overflow: hidden;
+    color: #2a3f5d;
+}
+
+.thumbnail-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+    line-height: 96px;
+    color: white;
+    overflow: hidden;
+}
+
+.x-rtl.thumbnails .thumbnail-item {
+    direction: ltr;
+    float: right;
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.x-rtl.thumbnails .thumbnail-text {
+    direction: rtl;
+}
+
+.x-panel-body-default.welcomepanel {
+    background-image: url(images/square.gif);
+    border: none;
+    text-align: center;
+    font-size: 3em;
+    padding-top: 10px;
+}
