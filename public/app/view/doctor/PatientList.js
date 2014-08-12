@@ -55,24 +55,29 @@ Ext.define('App.view.doctor.PatientList', {
                 xtype: 'toolbar',
                 dock: 'top',
                 items: [{
-                    iconCls: null,
-                    glyph: 59005, 
-                    text:'Reload',
-                    listeners: {
-                        click: "onReloadButtonClick"
-                    }
-                },{
-                    xtype: 'datefield',
+                    xtype: 'textfield',
                     anchor: '100%',
-                    fieldLabel: 'Antrian Tanggal',
-                    name: 'queue_date',
-                    maxValue: new Date(),
-                    reference: "queuedatefilter",
+                    fieldLabel: 'Nama',
+                    name: 'name',
+                    reference: "patientname",
+                },{
+                    xtype: 'textfield',
+                    anchor: '100%',
+                    fieldLabel: 'No. RM',
+                    name: 'norm',
+                    reference: "patientnorm",
+                },{
+                    iconCls: null,
+                    glyph: 59007, 
+                    text:'Search',
+                    listeners: {
+                        click: "onSearchButtonClick"
+                    }
                 }]
             }],
             bbar: {
                 xtype: 'pagingtoolbar',
-                pageSize: 10,
+                pageSize: 20,
                 store: Ext.data.StoreManager.get("patientlist"),
                 displayInfo: true,
                 plugins: new Ext.ux.SlidingPager()
@@ -81,8 +86,21 @@ Ext.define('App.view.doctor.PatientList', {
             columns: [
                 Ext.create('Ext.grid.RowNumberer'),
                 { text: 'Nama',  dataIndex: 'name' },
-                { text: 'Dokter', dataIndex: 'doctor', flex: 1 },
-                { text: 'Time', dataIndex: 'time' }
+                { text: 'No RM', dataIndex: 'norm'},
+                { text: 'Alamat', dataIndex: 'address', flex:1 },
+                {
+                    text: 'Aksi',
+                    menuDisabled: true,
+                    sortable: false,
+                    xtype: 'actioncolumn',
+                    width: 50,
+                    items: [{
+                        iconCls: 'edit-col',
+                        tooltip: 'Lihat dan Update Pasien',
+                        handler: function(grid, rowIndex, colIndex) {
+                        }
+                    }]
+                }
             ]
         }];
         this.callParent();

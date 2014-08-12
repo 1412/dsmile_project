@@ -102,6 +102,12 @@
 	content: "L";
 }
 
+/* fam Icon */
+.edit-col {
+	background-image: url(../../../images/fam/page_white_edit.png);
+}
+
+
 /* Default Icon */
 .icon-exec-dashboard:before {
 	content: "\e607";

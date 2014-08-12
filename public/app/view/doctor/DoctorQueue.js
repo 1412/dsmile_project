@@ -72,7 +72,7 @@ Ext.define('App.view.doctor.DoctorQueue', {
             }],
             bbar: {
                 xtype: 'pagingtoolbar',
-                pageSize: 10,
+                pageSize: 20,
                 store: Ext.data.StoreManager.get("doctorqueue"),
                 displayInfo: true,
                 plugins: new Ext.ux.SlidingPager()
