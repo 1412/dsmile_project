@@ -10,7 +10,8 @@ Ext.define('App.controller.Home', {
 
         'App.view.logout.Logout',
 
-        'App.view.doctor.DoctorQueue'
+        'App.view.doctor.DoctorQueue',
+        'App.view.doctor.PatientList'
     ],
     stores: [ "MainMenu" ],
     config: {
@@ -141,8 +142,8 @@ Ext.define('App.controller.Home', {
             }
             J.body.addCls("kitchensink-example");
             A = Ext.ClassManager.getNameByAlias("widget." + I);
-            //console.log(I)
-            //console.log(A)
+            console.log(I)
+            console.log(A)
             x = Ext.ClassManager.get(A);
             if (x) {
                 E = x.prototype;

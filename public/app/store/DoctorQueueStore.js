@@ -10,6 +10,11 @@ Ext.define('App.store.DoctorQueueStore', {
     sorters: [],
     proxy: {
         type: 'ajax',
-        url : '/getdoctorqueue'
+        url : '/getdoctorqueue',
+        reader: {
+            type: 'json',
+            model: 'App.view.doctor.DoctorQueueModel',
+            rootProperty: 'data'
+        }
     }
 });

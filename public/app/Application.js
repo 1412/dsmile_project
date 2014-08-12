@@ -28,7 +28,7 @@ Ext.define('App.Application', {
             Ext.supports.CSS3BorderRadius = false;
             Ext.getBody().addCls("x-nbr x-nlg");
         }  
-        Ext.setGlyphFontFamily("Pictos");
+        Ext.setGlyphFontFamily("icomoon");
         Ext.tip.QuickTipManager.init();
         Ext.state.Manager.setProvider(Ext.create("Ext.state.CookieProvider"));
         c.update("Creating Interface...");

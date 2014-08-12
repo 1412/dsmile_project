@@ -1,13 +1,13 @@
-Ext.define('App.view.doctor.DoctorQueue', {
+Ext.define('App.view.doctor.PatientList', {
     extend: 'Ext.Container',
-    xtype: 'doctor-queue',
+    xtype: 'doctor-patients',
     width: 800,
     requires: [
         'Ext.ux.SlidingPager',
-        'App.store.DoctorQueueStore',
-        'App.view.doctor.DoctorQueueController'        
+        'App.store.PatientListStore',
+        'App.view.doctor.PatientListController'        
     ],
-    controller: "doctorqueue",
+    controller: "patientlist",
     layout: {
         type: 'table',
         columns: 3,
@@ -32,19 +32,19 @@ Ext.define('App.view.doctor.DoctorQueue', {
         }
     },
     initComponent: function () {        
-        if (!Ext.data.StoreManager.lookup('doctorqueue')) {
-            Ext.create("App.store.DoctorQueueStore", {
-                storeId: "doctorqueue"
+        if (!Ext.data.StoreManager.lookup('patientlist')) {
+            Ext.create("App.store.PatientListStore", {
+                storeId: "patientlist"
             });
         }
         console.log(),
         this.items = [{
-            title: 'Antrian Pasien',
-            reference: "doctorqueuegrid",
+            title: 'Daftar Pasien',
+            reference: "dpatientlistgrid",
             stateful: true,
             collapsible: true,
             multiSelect: true,
-            stateId: 'doctorqueuegrid',
+            stateId: 'patientlistgrid',
             height: 450,
             pageSize: 20,
             viewConfig: {
@@ -73,11 +73,11 @@ Ext.define('App.view.doctor.DoctorQueue', {
             bbar: {
                 xtype: 'pagingtoolbar',
                 pageSize: 10,
-                store: Ext.data.StoreManager.get("doctorqueue"),
+                store: Ext.data.StoreManager.get("patientlist"),
                 displayInfo: true,
                 plugins: new Ext.ux.SlidingPager()
             },
-            store: Ext.data.StoreManager.get("doctorqueue"),
+            store: Ext.data.StoreManager.get("patientlist"),
             columns: [
                 Ext.create('Ext.grid.RowNumberer'),
                 { text: 'Nama',  dataIndex: 'name' },
