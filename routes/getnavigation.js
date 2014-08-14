@@ -97,7 +97,7 @@ router.get('/', function(req, res, next) {
 			                leaf: true
 			            }, {
 			                id: "doctor-medicalrecord",
-			                text: "Rekam medis",
+			                text: "Rekam Medis",
 			                leaf: true
 			            }, {
 			                id: "doctor-other",

@@ -1,13 +1,13 @@
-Ext.define('App.view.doctor.PatientList', {
+Ext.define('App.view.doctor.MedicalRecordList', {
     extend: 'Ext.Container',
-    xtype: 'doctor-patients',
+    xtype: 'doctor-medicalrecord',
     width: 800,
     requires: [
         'Ext.ux.SlidingPager',
-        'App.store.PatientListStore',
-        'App.view.doctor.PatientListController'        
+        'App.store.MedicalRecordListStore',
+        'App.view.doctor.MedicalRecordListController'        
     ],
-    controller: "patientlist",
+    controller: "medicalrecordlist",
     layout: {
         type: 'table',
         columns: 3,
@@ -32,18 +32,18 @@ Ext.define('App.view.doctor.PatientList', {
         }
     },
     initComponent: function () {        
-        if (!Ext.data.StoreManager.lookup('patientlist')) {
-            Ext.create("App.store.PatientListStore", {
-                storeId: "patientlist"
+        if (!Ext.data.StoreManager.lookup('medicalrecordlist')) {
+            Ext.create("App.store.MedicalRecordListStore", {
+                storeId: "medicalrecordlist"
             });
         }
         this.items = [{
-            title: 'Daftar Pasien',
-            reference: "patientlistgrid",
+            title: 'Daftar Reka Medis Untuk Pasien: ' + "",
+            reference: "medicalrecordlistgrid",
             stateful: true,
             collapsible: true,
             multiSelect: true,
-            stateId: 'patientlistgrid',
+            stateId: 'medicalrecordlist',
             height: 450,
             pageSize: 20,
             viewConfig: {
@@ -56,15 +56,16 @@ Ext.define('App.view.doctor.PatientList', {
                 items: [{
                     xtype: 'textfield',
                     anchor: '100%',
-                    fieldLabel: 'Nama',
-                    name: 'name',
-                    reference: "patientname",
-                },{
-                    xtype: 'textfield',
-                    anchor: '100%',
                     fieldLabel: 'No. RM',
                     name: 'norm',
                     reference: "patientnorm",
+                },{
+                    xtype: 'datefield',
+                    anchor: '100%',
+                    fieldLabel: 'MR Tanggal',
+                    name: 'mr_date',
+                    maxValue: new Date(),
+                    reference: "mr_datefilter",
                 },{
                     iconCls: null,
                     glyph: 59007, 
@@ -72,21 +73,27 @@ Ext.define('App.view.doctor.PatientList', {
                     listeners: {
                         click: "onSearchButtonClick"
                     }
+                },{
+                    iconCls: null,
+                    glyph: 59138, 
+                    text:'Search',
+                    listeners: {
+                        click: "onAddButtonClick"
+                    }
                 }]
             }],
             bbar: {
                 xtype: 'pagingtoolbar',
                 pageSize: 20,
-                store: Ext.data.StoreManager.get("patientlist"),
+                store: Ext.data.StoreManager.get("medicalrecordlist"),
                 displayInfo: true,
                 plugins: new Ext.ux.SlidingPager()
             },
-            store: Ext.data.StoreManager.get("patientlist"),
+            store: Ext.data.StoreManager.get("medicalrecordlist"),
             columns: [
                 Ext.create('Ext.grid.RowNumberer'),
-                { text: 'Nama',  dataIndex: 'name' },
-                { text: 'No RM', dataIndex: 'norm'},
-                { text: 'Alamat', dataIndex: 'address', flex:1 },
+                { text: 'No RM', dataIndex: 'norm', flex: 1},
+                { text: 'Tanggal', dataIndex: 'date'},
                 {
                     text: 'Aksi',
                     menuDisabled: true,
@@ -95,7 +102,7 @@ Ext.define('App.view.doctor.PatientList', {
                     width: 50,
                     items: [{
                         iconCls: 'edit-col',
-                        tooltip: 'Lihat dan Update Pasien',
+                        tooltip: 'Lihat dan Update Rekam Medis',
                         handler: function(grid, rowIndex, colIndex) {
                             this.up('grid').fireEvent('itemdetailbuttonclick', grid, rowIndex, colIndex);
                         }
