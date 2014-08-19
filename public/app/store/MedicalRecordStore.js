@@ -1,10 +1,11 @@
-Ext.define('App.store.MedicalRecordListStore', {
+
+Ext.define('App.store.MedicalRecordStore', {
     requires: [
-        'App.view.doctor.MedicalRecordListModel'      
+        'App.view.doctor.MedicalRecordModel'      
     ],
     extend: 'Ext.data.Store',
     alias: 'store.medicalrecordlist',    
-    model: 'App.view.doctor.MedicalRecordListModel',
+    model: 'App.view.doctor.MedicalRecordModel',
     pageSize: 50,
     remoteSort: true,
     sorters: [],
@@ -13,7 +14,7 @@ Ext.define('App.store.MedicalRecordListStore', {
         url : '/getmedicalrecordlist',
         reader: {
             type: 'json',
-            model: 'App.view.doctor.MedicalRecordListModel',
+            model: 'App.view.doctor.MedicalRecordModel',
             rootProperty: 'data'
         }
     }

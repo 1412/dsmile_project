@@ -21,11 +21,15 @@ Ext.define('Ext.ux.FieldReplicator', {
         if (!field.replicatorId) {
             field.replicatorId = Ext.id();
         }
-
-        field.on('blur', this.onBlur, this);
+        if (!field.replicateOn) {
+            field.replicateOn = ["blur"];
+        }
+        for (var i in field.replicateOn) {
+            field.on(field.replicateOn[i], this.triggerReplication, this);
+        }
     },
 
-    onBlur: function(field) {
+    triggerReplication: function(field) {
         var ownerCt = field.ownerCt,
             replicatorId = field.replicatorId,
             isEmpty = Ext.isEmpty(field.getRawValue()),
@@ -45,6 +49,9 @@ Ext.define('Ext.ux.FieldReplicator', {
             clone = field.cloneConfig({replicatorId: replicatorId});
             idx = ownerCt.items.indexOf(field);
             ownerCt.add(idx + 1, clone);
+            if (field.onAfterReplicate) {
+                field.onAfterReplicate(clone);
+            }
         }
     }
 

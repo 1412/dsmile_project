@@ -12,7 +12,7 @@ Ext.define('App.controller.Home', {
 
         'App.view.doctor.DoctorQueue',
         'App.view.doctor.PatientList',
-        'App.view.doctor.MedicalRecordList'
+        'App.view.doctor.MedicalRecord'
     ],
     stores: [ "MainMenu" ],
     config: {

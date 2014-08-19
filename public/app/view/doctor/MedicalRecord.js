@@ -1,13 +1,13 @@
-Ext.define('App.view.doctor.MedicalRecordList', {
+Ext.define('App.view.doctor.MedicalRecord', {
     extend: 'Ext.Container',
     xtype: 'doctor-medicalrecord',
     width: 800,
     requires: [
         'Ext.ux.SlidingPager',
-        'App.store.MedicalRecordListStore',
-        'App.view.doctor.MedicalRecordListController'        
+        'App.store.MedicalRecordStore',
+        'App.view.doctor.MedicalRecordController'        
     ],
-    controller: "medicalrecordlist",
+    controller: "medicalrecord",
     layout: {
         type: 'table',
         columns: 3,
@@ -31,10 +31,10 @@ Ext.define('App.view.doctor.MedicalRecordList', {
             }
         }
     },
-    initComponent: function () {        
+    initComponent: function () {
         if (!Ext.data.StoreManager.lookup('medicalrecordlist')) {
-            Ext.create("App.store.MedicalRecordListStore", {
-                storeId: "medicalrecordlist"
+            Ext.create("App.store.MedicalRecordStore", {
+                storeId: "medicalrecord"
             });
         }
         this.items = [{
@@ -85,11 +85,11 @@ Ext.define('App.view.doctor.MedicalRecordList', {
             bbar: {
                 xtype: 'pagingtoolbar',
                 pageSize: 20,
-                store: Ext.data.StoreManager.get("medicalrecordlist"),
+                store: Ext.data.StoreManager.get("medicalrecord"),
                 displayInfo: true,
                 plugins: new Ext.ux.SlidingPager()
             },
-            store: Ext.data.StoreManager.get("medicalrecordlist"),
+            store: Ext.data.StoreManager.get("medicalrecord"),
             columns: [
                 Ext.create('Ext.grid.RowNumberer'),
                 { text: 'No RM', dataIndex: 'norm', flex: 1},

@@ -1,4 +1,4 @@
-Ext.define('App.view.doctor.MedicalRecordListModel', {
+Ext.define('App.view.doctor.MedicalRecordModel', {
     extend: 'App.model.Base',
     fields: [
        {name: 'norm'},
