@@ -17,7 +17,8 @@ var session = require('cookie-session');
 var compression = require('compression');
 var timeout = require('connect-timeout');
 var confreader = require("config-reader");
-
+var recursivels = require('fs-readdir-recursive');
+var arrdiff = require('array-difference');
 var publicdir = path.join(__dirname, 'public');
 var routedir = path.join(__dirname, 'routes');
 var viewdir = path.join(__dirname, 'views');
@@ -76,7 +77,6 @@ app.use(methodOverride(function(req, res){
     }
 }));
 
-
 // app.use(csrf());
 app.use(compression({
     threshold: 512
@@ -89,30 +89,8 @@ global.app = app;
 global.db = app.db;
 global.Router = express.Router;
 
-/* Project Wait, this portion should be developed 
-   to replace current auto route */ /*
-app.locals.somevar = "hello world";
-routescript = require('./routes/_root.js');
-//app._router.stack.push(routescript);
-var URL = require('url');
-var vm = require('vm');
-var filename = routedir + "/route.js";
-fs.readFile(filename, function (err, script) {
-  	if (err) {
-  		next(err)
-  	}
-  	var f = new Function('context', 'require', 'with (context) { (function () { ' + script + '\n })() }');
-  	f(app, require);
-  	usingscript = vm.runInThisContext(data);
-  	console.log(usingscript);
-});
-
-app.use(function(req, res, next){
-	var url = URL.parse(req.url);	
-});
-*/
-
 app._router.stack_map = {};
+app._router_list = recursivels(routedir);
 app.setRoutes = function(scriptpath){	
 	if (scriptpath === undefined) {
 		scriptpath = routedir;
@@ -154,7 +132,8 @@ app.setRoutes = function(scriptpath){
                 	console.log(">> Replace Route Stack \"" + route + "\"");
                 } else {
                 	this.use(route, routescript);
-                    this._router.stack_map[route] = (this._router.stack.length-1);
+                    var stack_index = this._router.stack_map[route] = (this._router.stack.length-1);
+                    console.log("----------", this._router.stack_map[route], (this._router.stack.length-1), this._router.stack[stack_index].handle)
                     console.log(">> Add Route Stack \"" + route + "\"");
                 }
             }
@@ -165,6 +144,30 @@ app.setRoutes = function(scriptpath){
         }
     }
 }
+
+/* Dynamic add & Remove stack Nott work * /
+var checkroutechanges = function() {
+    var dirlist = recursivels(routedir);
+    var diff = arrdiff(dirlist, app._router_list);
+    for (var i in diff) {
+        var scriptpath = path.join(routedir, diff[i]);
+        if ((app._router_list.indexOf(diff[i]) == -1) && (dirlist.indexOf(diff[i]) > -1)) {
+            // if new route
+            console.log("New Route Found", scriptpath)
+            app.setRoutes(scriptpath);
+        } else if ((dirlist.indexOf(diff[i]) == -1) && (app._router_list.indexOf(diff[i]) > -1)) {
+            delete require.cache[require.resolve(scriptpath)];
+            var route = scriptpath.replace(routedir, "").replace(/\.js$/, "");
+            delete app._router.stack_map[route];
+            console.log(">> Remove Route Stack \"" + diff[i] + "\"");
+            // or route removed
+        }
+    }
+    app._router_list = dirlist;
+    setTimeout(checkroutechanges, 1000);
+}
+setTimeout(checkroutechanges, 1000);
+*/
 
 app.setErrorHandler = function(){
 	/// catch 404 and forward to error handler
@@ -196,7 +199,6 @@ app.setErrorHandler = function(){
 			error: {}
 		});
 	});
-
 }
 
 app.start = function() {

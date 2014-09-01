@@ -98,8 +98,17 @@
 .icon-doctor-medicalrecord:before{
 	content: "RM";
 }
-.icon-doctor-other:before{
-	content: "L";
+.icon-doctor-therapylist:before{
+	content: "T";
+}
+.icon-doctor-medicinelist:before{
+	content: "O";
+}
+.icon-doctor-salary:before{
+	content: "G";
+}
+.icon-doctor-changepassword:before{
+	content: "U";
 }
 
 /* fam Icon */

@@ -97,11 +97,24 @@ router.get('/', function(req, res, next) {
 			                leaf: true
 			            }, {
 			                id: "doctor-medicalrecord",
-			                text: "Rekam Medis",
+			                text: "Reka Medis",
+			                leaf: true,
+			                hidden: true
+			            }, {
+			                id: "doctor-therapylist",
+			                text: "Daftar Terapi",
 			                leaf: true
 			            }, {
-			                id: "doctor-other",
-			                text: "Lain Lain",
+			                id: "doctor-medicinelist",
+			                text: "Daftar Obat2an",
+			                leaf: true
+			            }, {
+			                id: "doctor-salary",
+			                text: "Lihat Pendapatan",
+			                leaf: true
+			            }, {
+			                id: "doctor-changepassword",
+			                text: "Ubah Sandi",
 			                leaf: true
 			            }]
 			        });
