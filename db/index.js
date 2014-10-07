@@ -1,5 +1,5 @@
 var SEQUELIZE = require('sequelize');
-var plural = require('plural')
+var plural = require('plural');
 var DB = function(config){
 	this.__proto__.schema = require('./schema.js');
 	this.__proto__.task = require('./initial.js');
@@ -38,9 +38,14 @@ var DB = function(config){
 		options.onerror = (options.onerror === undefined)? function(){}:options.onerror;
 		options.onsuccess = (options.onsuccess === undefined)? function(){}:options.onsuccess;
 		options.scope = (options.scope === undefined)? this:options.scope;
+        options.onbegin  = (options.onbegin === undefined)? function(){}:options.onbegin;
+        options.onconnected  = (options.onbegin === undefined)? function(){}:options.onconnected;
+        options.onbegindata  = (options.onbegin === undefined)? function(){}:options.onbegindata;
+        options.onenddata  = (options.onbegin === undefined)? function(){}:options.onenddata;
+        options.onfaildata  = (options.onbegin === undefined)? function(){}:options.onfaildata;
 		try {
 			this.preinit();
-			console.log(">> Connecting to database...");
+            options.onbegin.apply(options.scope, []);
 			this.Client = new SEQUELIZE(config.db.database, config.db.username, config.db.password, {
 				host: config.db.host,
 				port: config.db.port,
@@ -116,11 +121,11 @@ var DB = function(config){
 				}				
 			}
 			this.Client.sync().success(function() {
-				console.log(">> Connected to database");
+                options.onconnected.apply(options.scope, []);
 				this.task_object = {};
 				this.schema["ApplicationInfo"].count().success(function(c) {
 					if (c == 0) {
-						console.log(">> Insert initial data...");
+                        options.onbegindata.apply(options.scope, []);
 						this.taskreference = {};
 						this.taskworker = setInterval(function(){
 							if (this.taskworker.isrun) {
@@ -130,14 +135,11 @@ var DB = function(config){
 							if (this.task.length == 0) {
 								clearInterval(this.taskworker);
 								if (this.taskworker.success) {
-									console.log(">> Finish insert initial", 
-										(this.taskworker.error.length > 0)? "data with errors:\n":"", 
-										(this.taskworker.error.length > 0)? this.taskworker.error:"");
-									options.onsuccess.apply(options.scope, [this]);
+                                    options.onenddata.apply(options.scope, [this.taskworker]);
 									return;
 								} else {
-									console.log(">> Failed to insert initial data with errors:\n", this.taskworker.error);
-									options.onerror.apply(options.scope, [e, this]);
+                                    options.onenddata.apply(options.scope, [this.taskworker]);
+									options.onerror.apply(options.scope, [this.taskworker.error, this]);
 									return;
 								}								
 							} else {

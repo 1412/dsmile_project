@@ -1,5 +1,24 @@
 define(PROGRAM_PATH, function( ){ return require('path').dirname(require.main.filename).replace(/\\/gi, "/") });
 {
+    "_program_path": "::PROGRAM_PATH()",
+    "repl": {
+        "local": {
+            "enable": true
+        },
+        "telnet": {
+            "enable": true,
+            "port": 3001
+        }
+    },
+    "switches": {
+        "resetstate": {
+            "commands": [
+                "-r",
+                "--reset"
+            ],
+            "needvalue": false
+        }
+    },
 	"db": {
 		"enggine": "mysql",
 		"host": "localhost",
@@ -23,6 +42,5 @@ define(PROGRAM_PATH, function( ){ return require('path').dirname(require.main.fi
 		"admin_username": "superadmin",
 		"admin_password": "superadmin",
 		"admin_email": "admin@host.com"
-	},
-	"_program_path": "::PROGRAM_PATH()"
+	}
 }

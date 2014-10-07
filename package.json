@@ -1,5 +1,5 @@
 {
-  "name": "dsmileclinic",
+  "name": "ServerFramework",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -30,7 +30,8 @@
     "cookie-session": "~1.0.2",
     "compression": "~1.0.8",
     "connect-timeout": "~1.1.1",
-    "fs-readdir-recursive": "0.0.2"
+    "jswget": "~0.3.4",
+    "chokidar": "~0.8.4"
   },
   "main": "index.js",
   "author": "",

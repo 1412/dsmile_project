@@ -1,0 +1,511 @@
+[INFO] Fri Sep 05 2014 17:52:20 GMT+0700 (WIB) +> State loaded!
+[INFO] Fri Sep 05 2014 17:52:21 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Fri Sep 05 2014 17:52:21 GMT+0700 (WIB) +> Connected to database...
+[INFO] Fri Sep 05 2014 17:52:21 GMT+0700 (WIB) +> Express app listening to port: 3000
+[INFO] Fri Sep 05 2014 17:52:21 GMT+0700 (WIB) +> Add Route Stack '/'
+[INFO] Fri Sep 05 2014 17:52:21 GMT+0700 (WIB) +> Add Route Stack '/lol'
+[INFO] Fri Sep 05 2014 17:52:21 GMT+0700 (WIB) +> Add Route Stack '/swt'
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:09:22 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:09:22 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:09:25 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:09:25 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:09:26 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:09:26 GMT+0700 (WIB) +> Express app listening to port: 3000
+[INFO] Mon Sep 08 2014 09:09:26 GMT+0700 (WIB) +> Add Route Stack '/'
+[INFO] Mon Sep 08 2014 09:09:26 GMT+0700 (WIB) +> Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 09:09:26 GMT+0700 (WIB) +> Add Route Stack '/swt'
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:09:53 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:09:53 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:09:54 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:09:54 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:09:54 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:09:54 GMT+0700 (WIB) +> Express app listening to port: 3000
+[INFO] Mon Sep 08 2014 09:09:54 GMT+0700 (WIB) +> Add Route Stack '/'
+[INFO] Mon Sep 08 2014 09:09:54 GMT+0700 (WIB) +> Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 09:09:54 GMT+0700 (WIB) +> Add Route Stack '/swt'
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:10:04 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:10:04 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:10:05 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:10:05 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:10:06 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:10:06 GMT+0700 (WIB) +> Express app listening to port: 3000
+[INFO] Mon Sep 08 2014 09:10:06 GMT+0700 (WIB) +> Add Route Stack '/'
+[INFO] Mon Sep 08 2014 09:10:06 GMT+0700 (WIB) +> Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 09:10:06 GMT+0700 (WIB) +> Add Route Stack '/swt'
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:10:24 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:10:24 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:10:26 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:10:26 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:10:26 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:10:26 GMT+0700 (WIB) +> Express app listening to port: 3000
+[INFO] Mon Sep 08 2014 09:10:26 GMT+0700 (WIB) +> Add Route Stack '/'
+[INFO] Mon Sep 08 2014 09:10:26 GMT+0700 (WIB) +> Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 09:10:26 GMT+0700 (WIB) +> Add Route Stack '/swt'
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:10:32 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:10:32 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:10:33 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:10:33 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:10:33 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:10:33 GMT+0700 (WIB) +> Express app listening to port: 3000
+[INFO] Mon Sep 08 2014 09:10:33 GMT+0700 (WIB) +> Add Route Stack '/'
+[INFO] Mon Sep 08 2014 09:10:34 GMT+0700 (WIB) +> Add Route Stack '/swt'
+[INFO] Mon Sep 08 2014 09:10:34 GMT+0700 (WIB) +> Add Route Stack '/lol'
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:11:56 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:11:56 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:11:57 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:11:57 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:11:58 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:11:58 GMT+0700 (WIB) +> Express app listening to port: 3000
+[FATAL ERROR] Mon Sep 08 2014 09:11:58 GMT+0700 (WIB) +> [
+    "TypeError: Cannot read property 'closed' of undefined",
+    "    at Interface.repl.start.eval (/Users/decky/Documents/git/servertemplate/full.js:165:30)",
+    "    at __proto__.AppendLog (/Users/decky/Documents/git/servertemplate/full.js:104:38)",
+    "    at __proto__.SetExpressRoute (/Users/decky/Documents/git/servertemplate/full.js:407:30)",
+    "    at null.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:340:22)",
+    "    at EventEmitter.emit (events.js:98:17)",
+    "    at EventEmitter.FSWatcher.emit (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:365:31)",
+    "    at EventEmitter.FSWatcher._handleFile (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:284:17)",
+    "    at /Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:356:33",
+    "    at Object.oncomplete (fs.js:107:15)"
+]
+[FATAL ERROR] Mon Sep 08 2014 09:11:58 GMT+0700 (WIB) +> [
+    "TypeError: Cannot read property 'closed' of undefined",
+    "    at Interface.repl.start.eval (/Users/decky/Documents/git/servertemplate/full.js:165:30)",
+    "    at __proto__.AppendLog (/Users/decky/Documents/git/servertemplate/full.js:104:38)",
+    "    at __proto__.SetExpressRoute (/Users/decky/Documents/git/servertemplate/full.js:407:30)",
+    "    at null.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:340:22)",
+    "    at EventEmitter.emit (events.js:98:17)",
+    "    at EventEmitter.FSWatcher.emit (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:365:31)",
+    "    at EventEmitter.FSWatcher._handleFile (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:284:17)",
+    "    at /Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:356:33",
+    "    at Object.oncomplete (fs.js:107:15)"
+]
+[FATAL ERROR] Mon Sep 08 2014 09:11:58 GMT+0700 (WIB) +> [
+    "TypeError: Cannot read property 'closed' of undefined",
+    "    at Interface.repl.start.eval (/Users/decky/Documents/git/servertemplate/full.js:165:30)",
+    "    at __proto__.AppendLog (/Users/decky/Documents/git/servertemplate/full.js:104:38)",
+    "    at __proto__.SetExpressRoute (/Users/decky/Documents/git/servertemplate/full.js:407:30)",
+    "    at null.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:340:22)",
+    "    at EventEmitter.emit (events.js:98:17)",
+    "    at EventEmitter.FSWatcher.emit (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:365:31)",
+    "    at EventEmitter.FSWatcher._handleFile (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:284:17)",
+    "    at /Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:356:33",
+    "    at Object.oncomplete (fs.js:107:15)"
+]
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:12:16 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:12:16 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:12:17 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:12:17 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:12:18 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:12:18 GMT+0700 (WIB) +> Express app listening to port: 3000
+[FATAL ERROR] Mon Sep 08 2014 09:12:18 GMT+0700 (WIB) +> [
+    "TypeError: Cannot read property 'closed' of undefined",
+    "    at Interface.repl.start.eval (/Users/decky/Documents/git/servertemplate/full.js:165:30)",
+    "    at __proto__.AppendLog (/Users/decky/Documents/git/servertemplate/full.js:104:38)",
+    "    at __proto__.SetExpressRoute (/Users/decky/Documents/git/servertemplate/full.js:407:30)",
+    "    at null.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:340:22)",
+    "    at EventEmitter.emit (events.js:98:17)",
+    "    at EventEmitter.FSWatcher.emit (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:365:31)",
+    "    at EventEmitter.FSWatcher._handleFile (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:284:17)",
+    "    at /Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:356:33",
+    "    at Object.oncomplete (fs.js:107:15)"
+]
+[FATAL ERROR] Mon Sep 08 2014 09:12:18 GMT+0700 (WIB) +> [
+    "TypeError: Cannot read property 'closed' of undefined",
+    "    at Interface.repl.start.eval (/Users/decky/Documents/git/servertemplate/full.js:165:30)",
+    "    at __proto__.AppendLog (/Users/decky/Documents/git/servertemplate/full.js:104:38)",
+    "    at __proto__.SetExpressRoute (/Users/decky/Documents/git/servertemplate/full.js:407:30)",
+    "    at null.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:340:22)",
+    "    at EventEmitter.emit (events.js:98:17)",
+    "    at EventEmitter.FSWatcher.emit (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:365:31)",
+    "    at EventEmitter.FSWatcher._handleFile (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:284:17)",
+    "    at /Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:356:33",
+    "    at Object.oncomplete (fs.js:107:15)"
+]
+[FATAL ERROR] Mon Sep 08 2014 09:12:18 GMT+0700 (WIB) +> [
+    "TypeError: Cannot read property 'closed' of undefined",
+    "    at Interface.repl.start.eval (/Users/decky/Documents/git/servertemplate/full.js:165:30)",
+    "    at __proto__.AppendLog (/Users/decky/Documents/git/servertemplate/full.js:104:38)",
+    "    at __proto__.SetExpressRoute (/Users/decky/Documents/git/servertemplate/full.js:407:30)",
+    "    at null.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:340:22)",
+    "    at EventEmitter.emit (events.js:98:17)",
+    "    at EventEmitter.FSWatcher.emit (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:365:31)",
+    "    at EventEmitter.FSWatcher._handleFile (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:284:17)",
+    "    at /Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:356:33",
+    "    at Object.oncomplete (fs.js:107:15)"
+]
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:12:33 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:12:33 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:12:34 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:12:35 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:12:35 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:12:35 GMT+0700 (WIB) +> Express app listening to port: 3000
+[FATAL ERROR] Mon Sep 08 2014 09:12:35 GMT+0700 (WIB) +> [
+    "TypeError: Cannot read property 'closed' of undefined",
+    "    at Interface.repl.start.eval (/Users/decky/Documents/git/servertemplate/full.js:166:30)",
+    "    at __proto__.AppendLog (/Users/decky/Documents/git/servertemplate/full.js:105:38)",
+    "    at __proto__.SetExpressRoute (/Users/decky/Documents/git/servertemplate/full.js:408:30)",
+    "    at null.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:341:22)",
+    "    at EventEmitter.emit (events.js:98:17)",
+    "    at EventEmitter.FSWatcher.emit (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:365:31)",
+    "    at EventEmitter.FSWatcher._handleFile (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:284:17)",
+    "    at /Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:356:33",
+    "    at Object.oncomplete (fs.js:107:15)"
+]
+[FATAL ERROR] Mon Sep 08 2014 09:12:35 GMT+0700 (WIB) +> [
+    "TypeError: Cannot read property 'closed' of undefined",
+    "    at Interface.repl.start.eval (/Users/decky/Documents/git/servertemplate/full.js:166:30)",
+    "    at __proto__.AppendLog (/Users/decky/Documents/git/servertemplate/full.js:105:38)",
+    "    at __proto__.SetExpressRoute (/Users/decky/Documents/git/servertemplate/full.js:408:30)",
+    "    at null.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:341:22)",
+    "    at EventEmitter.emit (events.js:98:17)",
+    "    at EventEmitter.FSWatcher.emit (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:365:31)",
+    "    at EventEmitter.FSWatcher._handleFile (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:284:17)",
+    "    at /Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:356:33",
+    "    at Object.oncomplete (fs.js:107:15)"
+]
+[FATAL ERROR] Mon Sep 08 2014 09:12:35 GMT+0700 (WIB) +> [
+    "TypeError: Cannot read property 'closed' of undefined",
+    "    at Interface.repl.start.eval (/Users/decky/Documents/git/servertemplate/full.js:166:30)",
+    "    at __proto__.AppendLog (/Users/decky/Documents/git/servertemplate/full.js:105:38)",
+    "    at __proto__.SetExpressRoute (/Users/decky/Documents/git/servertemplate/full.js:408:30)",
+    "    at null.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:341:22)",
+    "    at EventEmitter.emit (events.js:98:17)",
+    "    at EventEmitter.FSWatcher.emit (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:365:31)",
+    "    at EventEmitter.FSWatcher._handleFile (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:284:17)",
+    "    at /Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:356:33",
+    "    at Object.oncomplete (fs.js:107:15)"
+]
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:13:10 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:13:10 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:13:11 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:13:11 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:13:11 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:13:11 GMT+0700 (WIB) +> Express app listening to port: 3000
+[FATAL ERROR] Mon Sep 08 2014 09:13:11 GMT+0700 (WIB) +> [
+    "TypeError: object is not a function",
+    "    at REPLServer.repl.start.eval (/Users/decky/Documents/git/servertemplate/full.js:167:21)",
+    "    at __proto__.AppendLog (/Users/decky/Documents/git/servertemplate/full.js:105:38)",
+    "    at __proto__.SetExpressRoute (/Users/decky/Documents/git/servertemplate/full.js:408:30)",
+    "    at null.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:341:22)",
+    "    at EventEmitter.emit (events.js:98:17)",
+    "    at EventEmitter.FSWatcher.emit (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:365:31)",
+    "    at EventEmitter.FSWatcher._handleFile (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:284:17)",
+    "    at /Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:356:33",
+    "    at Object.oncomplete (fs.js:107:15)"
+]
+[FATAL ERROR] Mon Sep 08 2014 09:13:11 GMT+0700 (WIB) +> [
+    "TypeError: object is not a function",
+    "    at REPLServer.repl.start.eval (/Users/decky/Documents/git/servertemplate/full.js:167:21)",
+    "    at __proto__.AppendLog (/Users/decky/Documents/git/servertemplate/full.js:105:38)",
+    "    at __proto__.SetExpressRoute (/Users/decky/Documents/git/servertemplate/full.js:408:30)",
+    "    at null.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:341:22)",
+    "    at EventEmitter.emit (events.js:98:17)",
+    "    at EventEmitter.FSWatcher.emit (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:365:31)",
+    "    at EventEmitter.FSWatcher._handleFile (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:284:17)",
+    "    at /Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:356:33",
+    "    at Object.oncomplete (fs.js:107:15)"
+]
+[FATAL ERROR] Mon Sep 08 2014 09:13:11 GMT+0700 (WIB) +> [
+    "TypeError: object is not a function",
+    "    at REPLServer.repl.start.eval (/Users/decky/Documents/git/servertemplate/full.js:167:21)",
+    "    at __proto__.AppendLog (/Users/decky/Documents/git/servertemplate/full.js:105:38)",
+    "    at __proto__.SetExpressRoute (/Users/decky/Documents/git/servertemplate/full.js:408:30)",
+    "    at null.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:341:22)",
+    "    at EventEmitter.emit (events.js:98:17)",
+    "    at EventEmitter.FSWatcher.emit (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:365:31)",
+    "    at EventEmitter.FSWatcher._handleFile (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:284:17)",
+    "    at /Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:356:33",
+    "    at Object.oncomplete (fs.js:107:15)"
+]
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:13:24 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:13:24 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:13:26 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:13:26 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:13:26 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:13:26 GMT+0700 (WIB) +> Express app listening to port: 3000
+[FATAL ERROR] Mon Sep 08 2014 09:13:26 GMT+0700 (WIB) +> [
+    "TypeError: object is not a function",
+    "    at REPLServer.repl.start.eval (/Users/decky/Documents/git/servertemplate/full.js:166:21)",
+    "    at __proto__.AppendLog (/Users/decky/Documents/git/servertemplate/full.js:104:38)",
+    "    at __proto__.SetExpressRoute (/Users/decky/Documents/git/servertemplate/full.js:407:30)",
+    "    at null.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:340:22)",
+    "    at EventEmitter.emit (events.js:98:17)",
+    "    at EventEmitter.FSWatcher.emit (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:365:31)",
+    "    at EventEmitter.FSWatcher._handleFile (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:284:17)",
+    "    at /Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:356:33",
+    "    at Object.oncomplete (fs.js:107:15)"
+]
+[FATAL ERROR] Mon Sep 08 2014 09:13:26 GMT+0700 (WIB) +> [
+    "TypeError: object is not a function",
+    "    at REPLServer.repl.start.eval (/Users/decky/Documents/git/servertemplate/full.js:166:21)",
+    "    at __proto__.AppendLog (/Users/decky/Documents/git/servertemplate/full.js:104:38)",
+    "    at __proto__.SetExpressRoute (/Users/decky/Documents/git/servertemplate/full.js:407:30)",
+    "    at null.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:340:22)",
+    "    at EventEmitter.emit (events.js:98:17)",
+    "    at EventEmitter.FSWatcher.emit (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:365:31)",
+    "    at EventEmitter.FSWatcher._handleFile (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:284:17)",
+    "    at /Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:356:33",
+    "    at Object.oncomplete (fs.js:107:15)"
+]
+[FATAL ERROR] Mon Sep 08 2014 09:13:26 GMT+0700 (WIB) +> [
+    "TypeError: object is not a function",
+    "    at REPLServer.repl.start.eval (/Users/decky/Documents/git/servertemplate/full.js:166:21)",
+    "    at __proto__.AppendLog (/Users/decky/Documents/git/servertemplate/full.js:104:38)",
+    "    at __proto__.SetExpressRoute (/Users/decky/Documents/git/servertemplate/full.js:407:30)",
+    "    at null.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:340:22)",
+    "    at EventEmitter.emit (events.js:98:17)",
+    "    at EventEmitter.FSWatcher.emit (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:365:31)",
+    "    at EventEmitter.FSWatcher._handleFile (/Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:284:17)",
+    "    at /Users/decky/Documents/git/servertemplate/node_modules/chokidar/index.js:356:33",
+    "    at Object.oncomplete (fs.js:107:15)"
+]
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:14:14 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:14:14 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:14:15 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:14:15 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:14:15 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:14:16 GMT+0700 (WIB) +> Express app listening to port: 3000
+[INFO] Mon Sep 08 2014 09:14:16 GMT+0700 (WIB) +> Add Route Stack '/'
+[INFO] Mon Sep 08 2014 09:14:16 GMT+0700 (WIB) +> Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 09:14:16 GMT+0700 (WIB) +> Add Route Stack '/swt'
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:16:17 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:16:17 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:16:18 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:16:18 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:16:18 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:16:18 GMT+0700 (WIB) +> Express app listening to port: 3000
+[INFO] Mon Sep 08 2014 09:16:18 GMT+0700 (WIB) +> Add Route Stack '/'
+[INFO] Mon Sep 08 2014 09:16:18 GMT+0700 (WIB) +> Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 09:16:18 GMT+0700 (WIB) +> Add Route Stack '/swt'
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:16:40 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:16:40 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:16:41 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:16:41 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:16:42 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:16:42 GMT+0700 (WIB) +> Express app listening to port: 3000
+[INFO] Mon Sep 08 2014 09:16:42 GMT+0700 (WIB) +> Add Route Stack '/'
+[INFO] Mon Sep 08 2014 09:16:42 GMT+0700 (WIB) +> Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 09:16:42 GMT+0700 (WIB) +> Add Route Stack '/swt'
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:16:51 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:16:51 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:16:52 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:16:52 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:16:52 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:16:52 GMT+0700 (WIB) +> Express app listening to port: 3000
+[INFO] Mon Sep 08 2014 09:16:52 GMT+0700 (WIB) +> Add Route Stack '/'
+[INFO] Mon Sep 08 2014 09:16:52 GMT+0700 (WIB) +> Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 09:16:52 GMT+0700 (WIB) +> Add Route Stack '/swt'
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:17:55 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:17:55 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:17:56 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:17:56 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:17:56 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:17:56 GMT+0700 (WIB) +> Express app listening to port: 3000
+[INFO] Mon Sep 08 2014 09:17:56 GMT+0700 (WIB) +> Add Route Stack '/'
+[INFO] Mon Sep 08 2014 09:17:56 GMT+0700 (WIB) +> Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 09:17:56 GMT+0700 (WIB) +> Add Route Stack '/swt'
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:18:09 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:18:09 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:18:10 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:18:10 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:18:10 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:18:10 GMT+0700 (WIB) +> Express app listening to port: 3000
+[INFO] Mon Sep 08 2014 09:18:10 GMT+0700 (WIB) +> Add Route Stack '/'
+[INFO] Mon Sep 08 2014 09:18:10 GMT+0700 (WIB) +> Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 09:18:10 GMT+0700 (WIB) +> Add Route Stack '/swt'
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:19:09 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:19:09 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:19:16 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:19:16 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:19:17 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:19:17 GMT+0700 (WIB) +> Express app listening to port: 3000
+[INFO] Mon Sep 08 2014 09:19:17 GMT+0700 (WIB) +> Add Route Stack '/'
+[INFO] Mon Sep 08 2014 09:19:17 GMT+0700 (WIB) +> Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 09:19:17 GMT+0700 (WIB) +> Add Route Stack '/swt'
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:20:14 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:20:14 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:20:16 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:20:17 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:20:17 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:20:17 GMT+0700 (WIB) +> Express app listening to port: 3000
+[INFO] Mon Sep 08 2014 09:20:17 GMT+0700 (WIB) +> Add Route Stack '/'
+[INFO] Mon Sep 08 2014 09:20:17 GMT+0700 (WIB) +> Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 09:20:17 GMT+0700 (WIB) +> Add Route Stack '/swt'
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:22:07 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:22:07 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:22:09 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:22:10 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 09:22:10 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 09:22:10 GMT+0700 (WIB) +> Express app listening to port: 3000
+[INFO] Mon Sep 08 2014 09:22:10 GMT+0700 (WIB) +> Add Route Stack '/'
+[INFO] Mon Sep 08 2014 09:22:10 GMT+0700 (WIB) +> Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 09:22:10 GMT+0700 (WIB) +> Add Route Stack '/swt'
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 09:31:04 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:31:04 GMT+0700 (WIB) +> State saved!
+[FATAL ERROR] Mon Sep 08 2014 09:31:09 GMT+0700 (WIB) +> [
+    "TypeError: Cannot read property 'resetstate' of undefined",
+    "    at __proto__.ParseCommandSwitches (/Users/decky/Documents/git/servertemplate/full.js:453:60)",
+    "    at __proto__.init (/Users/decky/Documents/git/servertemplate/full.js:473:14)",
+    "    at /Users/decky/Documents/git/servertemplate/full.js:656:10",
+    "    at b (domain.js:183:18)",
+    "    at Domain.run (domain.js:123:23)",
+    "    at Object.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:654:8)",
+    "    at Module._compile (module.js:456:26)",
+    "    at Object.Module._extensions..js (module.js:474:10)",
+    "    at Module.load (module.js:356:32)",
+    "    at Function.Module._load (module.js:312:12)"
+]
+[EXIT] Mon Sep 08 2014 09:31:09 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:31:36 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:31:36 GMT+0700 (WIB) +> State cleared!
+[EXIT] Mon Sep 08 2014 09:31:36 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:43:04 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 09:43:04 GMT+0700 (WIB) +> State cleared!
+[EXIT] Mon Sep 08 2014 09:43:04 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:43:06 GMT+0700 (WIB) +> State loaded!
+[FATAL ERROR] Mon Sep 08 2014 09:43:06 GMT+0700 (WIB) +> [
+    "TypeError: Object #<Object> has no method 'suicide'",
+    "    at __proto__.InitREPL (/Users/decky/Documents/git/servertemplate/full.js:121:23)",
+    "    at __proto__.init (/Users/decky/Documents/git/servertemplate/full.js:455:22)",
+    "    at /Users/decky/Documents/git/servertemplate/full.js:632:10",
+    "    at b (domain.js:183:18)",
+    "    at Domain.run (domain.js:123:23)",
+    "    at Object.<anonymous> (/Users/decky/Documents/git/servertemplate/full.js:630:8)",
+    "    at Module._compile (module.js:456:26)",
+    "    at Object.Module._extensions..js (module.js:474:10)",
+    "    at Module.load (module.js:356:32)",
+    "    at Function.Module._load (module.js:312:12)"
+]
+[EXIT] Mon Sep 08 2014 09:43:06 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:43:06 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:43:35 GMT+0700 (WIB) +> State loaded!
+[EXIT] Mon Sep 08 2014 09:43:35 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:43:35 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:44:02 GMT+0700 (WIB) +> State loaded!
+[EXIT] Mon Sep 08 2014 09:44:58 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:44:58 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:44:59 GMT+0700 (WIB) +> State loaded!
+[EXIT] Mon Sep 08 2014 09:57:44 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 09:57:44 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 09:57:46 GMT+0700 (WIB) +> State loaded!
+[EXIT] Mon Sep 08 2014 10:18:29 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 10:18:29 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 10:18:31 GMT+0700 (WIB) +> State loaded!
+[EXIT] Mon Sep 08 2014 10:18:45 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 10:18:45 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 10:18:46 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 10:18:47 GMT+0700 (WIB) +> Connecting to database...
+[INFO] Mon Sep 08 2014 10:18:47 GMT+0700 (WIB) +> Express app listening to port: 3000
+[INFO] Mon Sep 08 2014 10:18:47 GMT+0700 (WIB) +> Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 10:18:47 GMT+0700 (WIB) +> Add Route Stack '/'
+[INFO] Mon Sep 08 2014 10:18:47 GMT+0700 (WIB) +> Add Route Stack '/swt'
+[INFO] Mon Sep 08 2014 10:18:47 GMT+0700 (WIB) +> Connected to database...
+[INFO] Mon Sep 08 2014 10:18:47 GMT+0700 (WIB) +> Synched with database
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 10:24:01 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 10:24:01 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 10:24:03 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 10:24:04 GMT+0700 (WIB) +> >> DB: Connecting...
+[INFO] Mon Sep 08 2014 10:24:04 GMT+0700 (WIB) +> >> Express: listening to port: 3000
+[INFO] Mon Sep 08 2014 10:24:04 GMT+0700 (WIB) +> >> Express: Add Route Stack '/'
+[INFO] Mon Sep 08 2014 10:24:04 GMT+0700 (WIB) +> >> Express: Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 10:24:04 GMT+0700 (WIB) +> >> Express: Add Route Stack '/swt'
+[INFO] Mon Sep 08 2014 10:24:04 GMT+0700 (WIB) +> >> DB: Connected
+[INFO] Mon Sep 08 2014 10:24:04 GMT+0700 (WIB) +> >> DB: Finish synch
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 10:25:29 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 10:25:29 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 10:25:33 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 10:25:34 GMT+0700 (WIB) +> >> DB: Connecting...
+[INFO] Mon Sep 08 2014 10:25:34 GMT+0700 (WIB) +> >> Express: listening to port: 3000
+[FATAL ERROR] Mon Sep 08 2014 10:25:34 GMT+0700 (WIB) +> [
+    "TypeError: Object #<Object> has no method 'start'",
+    "    at __proto__.init (/Users/decky/Documents/git/servertemplate/index.js:5:7)",
+    "    at Object.<anonymous> (/Users/decky/Documents/git/servertemplate/index.js:8:14)",
+    "    at Module._compile (module.js:456:26)",
+    "    at Object.Module._extensions..js (module.js:474:10)",
+    "    at Module.load (module.js:356:32)",
+    "    at Function.Module._load (module.js:312:12)",
+    "    at Function.Module.runMain (module.js:497:10)",
+    "    at startup (node.js:119:16)",
+    "    at node.js:901:3"
+]
+[INFO] Mon Sep 08 2014 10:25:34 GMT+0700 (WIB) +> >> Express: Add Route Stack '/'
+[INFO] Mon Sep 08 2014 10:25:34 GMT+0700 (WIB) +> >> Express: Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 10:25:34 GMT+0700 (WIB) +> >> Express: Add Route Stack '/swt'
+[INFO] Mon Sep 08 2014 10:25:34 GMT+0700 (WIB) +> >> DB: Connected
+[INFO] Mon Sep 08 2014 10:25:34 GMT+0700 (WIB) +> >> DB: Finish synch
+[INFO] Mon Sep 08 2014 10:25:48 GMT+0700 (WIB) +> >> Express: Stop listening
+[INFO] Mon Sep 08 2014 10:25:48 GMT+0700 (WIB) +> Local REPL interface is terminated
+[EXIT] Mon Sep 08 2014 10:25:48 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 10:25:48 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 10:27:27 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 10:27:28 GMT+0700 (WIB) +> >> DB: Connecting...
+[INFO] Mon Sep 08 2014 10:27:28 GMT+0700 (WIB) +> >> Express: listening to port: 3000
+[FATAL ERROR] Mon Sep 08 2014 10:27:28 GMT+0700 (WIB) +> [
+    "TypeError: Object [object Object] has no method 'init'",
+    "    at Object.<anonymous> (/Users/decky/Documents/git/servertemplate/index.js:5:14)",
+    "    at Module._compile (module.js:456:26)",
+    "    at Object.Module._extensions..js (module.js:474:10)",
+    "    at Module.load (module.js:356:32)",
+    "    at Function.Module._load (module.js:312:12)",
+    "    at Function.Module.runMain (module.js:497:10)",
+    "    at startup (node.js:119:16)",
+    "    at node.js:901:3"
+]
+[INFO] Mon Sep 08 2014 10:27:28 GMT+0700 (WIB) +> >> Express: Add Route Stack '/'
+[INFO] Mon Sep 08 2014 10:27:28 GMT+0700 (WIB) +> >> Express: Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 10:27:28 GMT+0700 (WIB) +> >> Express: Add Route Stack '/swt'
+[INFO] Mon Sep 08 2014 10:27:28 GMT+0700 (WIB) +> >> DB: Connected
+[INFO] Mon Sep 08 2014 10:27:28 GMT+0700 (WIB) +> >> DB: Finish synch
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 10:27:30 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 10:27:30 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 10:27:36 GMT+0700 (WIB) +> State loaded!
+[INFO] Mon Sep 08 2014 10:27:36 GMT+0700 (WIB) +> >> DB: Connecting...
+[INFO] Mon Sep 08 2014 10:27:36 GMT+0700 (WIB) +> >> Express: listening to port: 3000
+[INFO] Mon Sep 08 2014 10:27:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/'
+[INFO] Mon Sep 08 2014 10:27:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 10:27:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/swt'
+[INFO] Mon Sep 08 2014 10:27:37 GMT+0700 (WIB) +> >> DB: Connected
+[INFO] Mon Sep 08 2014 10:27:37 GMT+0700 (WIB) +> >> DB: Finish synch
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 10:29:37 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 10:29:37 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 10:29:39 GMT+0700 (WIB) +> >> State: loaded!
+[INFO] Mon Sep 08 2014 10:29:39 GMT+0700 (WIB) +> >> REPL: Remote REPL ready to listen on port: 3001
+[INFO] Mon Sep 08 2014 10:29:40 GMT+0700 (WIB) +> >> DB: Connecting...
+[INFO] Mon Sep 08 2014 10:29:40 GMT+0700 (WIB) +> >> Express: listening to port: 3000
+[INFO] Mon Sep 08 2014 10:29:40 GMT+0700 (WIB) +> >> Express: Add Route Stack '/'
+[INFO] Mon Sep 08 2014 10:29:40 GMT+0700 (WIB) +> >> Express: Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 10:29:40 GMT+0700 (WIB) +> >> Express: Add Route Stack '/swt'
+[INFO] Mon Sep 08 2014 10:29:40 GMT+0700 (WIB) +> >> DB: Connected
+[INFO] Mon Sep 08 2014 10:29:40 GMT+0700 (WIB) +> >> DB: Finish synch
+[FATAL ERROR] SIGINT[EXIT] Mon Sep 08 2014 10:29:46 GMT+0700 (WIB) +> Program is terminated!
+[INFO] Mon Sep 08 2014 10:29:46 GMT+0700 (WIB) +> State saved!
+[INFO] Mon Sep 08 2014 10:30:51 GMT+0700 (WIB) +> >> State: loaded!
+[INFO] Mon Sep 08 2014 10:30:51 GMT+0700 (WIB) +> >> REPL: Remote REPL ready to listen on port: 3001
+[INFO] Mon Sep 08 2014 10:30:51 GMT+0700 (WIB) +> >> DB: Connecting...
+[INFO] Mon Sep 08 2014 10:30:51 GMT+0700 (WIB) +> >> Express: listening to port: 3000
+[INFO] Mon Sep 08 2014 10:30:51 GMT+0700 (WIB) +> >> Express: Add Route Stack '/'
+[INFO] Mon Sep 08 2014 10:30:51 GMT+0700 (WIB) +> >> Express: Add Route Stack '/lol'
+[INFO] Mon Sep 08 2014 10:30:51 GMT+0700 (WIB) +> >> Express: Add Route Stack '/swt'
+[INFO] Mon Sep 08 2014 10:30:51 GMT+0700 (WIB) +> >> DB: Connected
+[INFO] Mon Sep 08 2014 10:30:51 GMT+0700 (WIB) +> >> DB: Finish synch
+[INFO] Mon Sep 08 2014 10:34:36 GMT+0700 (WIB) +> >> State: loaded!
+[INFO] Mon Sep 08 2014 10:34:36 GMT+0700 (WIB) +> >> REPL: Remote REPL ready to listen on port: 3001
+[INFO] Mon Sep 08 2014 10:34:37 GMT+0700 (WIB) +> >> DB: Connecting...
+[INFO] Mon Sep 08 2014 10:34:37 GMT+0700 (WIB) +> >> Express: listening to port: 3000
+[INFO] Mon Sep 08 2014 10:34:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/'
+[INFO] Mon Sep 08 2014 10:34:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/getdoctorqueue'
+[INFO] Mon Sep 08 2014 10:34:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/getmedicalrecordlist'
+[INFO] Mon Sep 08 2014 10:34:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/getmedicinelist'
+[INFO] Mon Sep 08 2014 10:34:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/getnavigation'
+[INFO] Mon Sep 08 2014 10:34:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/getpatientlist'
+[INFO] Mon Sep 08 2014 10:34:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/getteethlist'
+[INFO] Mon Sep 08 2014 10:34:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/getteethlisthtml'
+[INFO] Mon Sep 08 2014 10:34:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/gettherapylist'
+[INFO] Mon Sep 08 2014 10:34:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/index'
+[INFO] Mon Sep 08 2014 10:34:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/signin'
+[INFO] Mon Sep 08 2014 10:34:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/signout'
+[INFO] Mon Sep 08 2014 10:34:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/users'
+[INFO] Mon Sep 08 2014 10:34:37 GMT+0700 (WIB) +> >> Express: Add Route Stack '/users2'
+[INFO] Mon Sep 08 2014 10:34:38 GMT+0700 (WIB) +> >> DB: Connected
+[INFO] Mon Sep 08 2014 10:34:38 GMT+0700 (WIB) +> >> DB: Finish synch
